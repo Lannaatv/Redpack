@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Blumgi Castle</title>
+</head>
+    <style>
+  body{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+    .popup {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      position: fixed;
+      top: 0px;
+      opacity: 0;
+      transition: all .2s ease-in;
+      left: 0px;
+      visibility: hidden;
+      z-index: 9999;
+    }
+
+    .popup__content {
+      width: 110px;
+      text-align: center;
+      position: relative;
+      margin: 45vh auto;
+      margin-left: 38%;
+    }
+
+    .pop__image {
+      width: 100px;
+      height: 100px;
+    }
+
+    .popup--show {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+<body>
+<iframe id="sg-game" frameborder="0" scrolling="no" src="https://games3.startgamer.ru/1/blumgi_castle/" allowfullscreen="true" style="width: 100vw; height: 100vh;"></iframe>  
+
+      <div class="popup" id="popup">
+    <div class="popup__content">
+      <img class="pop__image" src="3.gif">
+    </div>
+  </div>
+
+  
+</body>
+</html>

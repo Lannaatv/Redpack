@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Boost Buddies</title>
+  
+        <style>
+  body{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+    .popup {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      position: fixed;
+      top: 0px;
+      opacity: 0;
+      transition: all .2s ease-in;
+      left: 0px;
+      visibility: hidden;
+      z-index: 9999;
+    }
+
+    .popup__content {
+      width: 110px;
+      text-align: center;
+      position: relative;
+      margin: 45vh auto;
+      margin-left: 38%;
+    }
+
+    .pop__image {
+      width: 100px;
+      height: 100px;
+    }
+
+    .popup--show {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+
+  
+</head>
+<body>
+<iframe id="sg-game" frameborder="0" scrolling="no" src="https://games2.startgamer.ru/boost_buddies/" allowfullscreen="true" style="width: 100vw; height: 100vh;"></iframe>  
+  
+  
+    <div class="popup" id="popup">
+    <div class="popup__content">
+      <img class="pop__image" src="3.gif">
+    </div>
+  </div>
+
+  <script>
+    function checkOrientation() {
+        const popup = document.getElementById("popup");
+
+        if (window.innerHeight > window.innerWidth) {
+            // Mode Portrait - Tampilkan pop-up
+            popup.classList.add("popup--show");
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden";
+        } else {
+            // Mode Landscape - Sembunyikan pop-up
+            popup.classList.remove("popup--show");
+            document.body.style.overflow = "auto";
+            document.documentElement.style.overflow = "auto";
+        }
+    }
+
+    // Panggil fungsi saat halaman dimuat
+    checkOrientation();
+
+    // Tambahkan event listener untuk mendeteksi perubahan orientasi
+    window.addEventListener("resize", checkOrientation);
+  </script>
+  
+</body>
+</html>

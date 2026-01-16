@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+  <title>Crossy Road</title>
+      <style>
+    body{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+    .popup {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      position: fixed;
+      top: 0px;
+      opacity: 0;
+      transition: all .2s ease-in;
+      left: 0px;
+      visibility: hidden;
+      z-index: 9999;
+    }
+
+    .popup__content {
+      width: 110px;
+      text-align: center;
+      position: relative;
+      margin: 45vh auto;
+      margin-left: 38%;
+    }
+
+    .pop__image {
+      width: 100px;
+      height: 100px;
+    }
+
+    .popup--show {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+  
+  <style>
+          #overlaya {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #popcorn {
+            display: block;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: whitesmoke;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            border-radius: 10px;
+        }
+        .slideres {
+            width: 300px;
+            height: 260px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slideses {
+            display: flex;
+            width: 900px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slidecu {
+            width: 300px;
+            flex-shrink: 0;
+            position: relative;
+        }
+        .slidecu img {
+            width: 100%;
+            height: 260px;
+            border-radius: 10px;
+        }
+        .text {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px;
+            font-size: 14px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .controllss {
+            display: flex;
+            margin-top: 10px;
+          
+          width: 80px;
+            height: 50px;
+            gap: 50px;
+          
+          color: black;
+          
+          
+        }
+        #tutupbutton {
+            display: none;
+            margin-top: 3px;
+            margin-left: 110px;
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            border: 3px solid black;
+            border-radius: 50px;
+            padding-top: 10px;
+          padding-bottom: 10px;
+          padding-right: 15px;
+          padding-left: 13px;
+            color: black;
+            cursor: pointer;
+        }
+  
+  @media only screen and (min-width: 768px) {
+    
+        .slideres {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+            .slidecu img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+  }
+    </style>
+  
+</head>
+<body>
+<iframe id="sg-game" frameborder="0" scrolling="no" src="https://games2.startgamer.ru/crossy_road/?world=original" allowfullscreen="true" style="width: 100vw; height: 100vh; margin-top: 0px; margin-right: 0px; margin-left: 0px; margin-bottom: -4px;"></iframe>  
+  
+      <div class="popup" id="popup">
+    <div class="popup__content">
+      <img class="pop__image" src="3.gif">
+    </div>
+  </div>
+
+  <script>
+    function checkOrientation() {
+        const popup = document.getElementById("popup");
+
+        if (window.innerHeight > window.innerWidth) {
+            // Mode Portrait - Tampilkan pop-up
+            popup.classList.add("popup--show");
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden";
+        } else {
+            // Mode Landscape - Sembunyikan pop-up
+            popup.classList.remove("popup--show");
+            document.body.style.overflow = "auto";
+            document.documentElement.style.overflow = "auto";
+        }
+    }
+
+    // Panggil fungsi saat halaman dimuat
+    checkOrientation();
+
+    // Tambahkan event listener untuk mendeteksi perubahan orientasi
+    window.addEventListener("resize", checkOrientation);
+  </script>
+  
+  
+      
+  <div id="overlaya">
+    <div id="popcorn">
+        <div class="slideres">
+            <div class="slideses" id="slideses">
+                <div class="slidecu">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuwoDu_v491ylw_DBc85jiEtOENM5EQTI1bLIP0SZN1Xk8izP5bTNfDO0E5lSbHkXLFZnNhy8qCP1fOAm7iIJqwmR5jIqrbPONJv1BiwG1L6WjxVFRIvzM72ZKpRNFyVU5bxhK6kIQ1YqdHMucmjiw-7ySxLj-M6A5-m0Z4or-be5YaUWCXvXHInIrAGM/s320/Picsart_25-05-21_00-11-13-505.jpg" alt="Gambar 2">
+                    <p class="text">Game Ini membutuhkan Gamepad atau Kontroler lainnya agar dapat dimainkan</p>
+                </div>
+                <div class="slidecu">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuwoDu_v491ylw_DBc85jiEtOENM5EQTI1bLIP0SZN1Xk8izP5bTNfDO0E5lSbHkXLFZnNhy8qCP1fOAm7iIJqwmR5jIqrbPONJv1BiwG1L6WjxVFRIvzM72ZKpRNFyVU5bxhK6kIQ1YqdHMucmjiw-7ySxLj-M6A5-m0Z4or-be5YaUWCXvXHInIrAGM/s320/Picsart_25-05-21_00-11-13-505.jpg" alt="Gambar 3"><p class="text">Jika Kontroller telah terhubung, anda bisa klik tombol "X", untuk menutup popup.</p>
+                </div>
+            </div>
+        </div>
+        <div class="controllss">
+            <button onclick="prevSlide()"><i><fa class="fa fa-arrow-left"></fa></i></button>
+            <button onclick="nextSlide()"><i><fa class="fa fa-arrow-right"></fa></i></button>
+            <button id="tutupbutton" onclick="tutupPopcorn()">X</button>
+        </div>
+    </div>
+</div>
+      
+  <script>
+
+    let index = 0;
+
+    function updateSlider() {
+        const slideses = document.getElementById("slideses");
+        slideses.style.transform = `translateX(-${index * 300}px)`;
+
+        if (index === document.querySelectorAll(".slidecu").length - 1) {
+            document.getElementById("tutupbutton").style.display = "block";
+        } else {
+            document.getElementById("tutupbutton").style.display = "none";
+        }
+    }
+
+    function nextSlide() {
+        if (index < document.querySelectorAll(".slidecu").length - 1) {
+            index++;
+            updateSlider();
+        }
+    }
+
+    function prevSlide() {
+        if (index > 0) {
+            index--;
+            updateSlider();
+        }
+    }
+
+    function tutupPopcorn() {
+        document.getElementById("overlaya").style.display = "none";
+    }
+</script>
+      
+</body>
+</html>
