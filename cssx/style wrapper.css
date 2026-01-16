@@ -1,0 +1,124 @@
+.font {
+    color: rgb(78, 78, 78);
+  padding-left: 10px;
+  
+}
+.colors {
+    color: ;
+  padding-left: 10px;
+  font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.colorsa {
+    color: black;
+  font-size: 1rem;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.colorsas {
+    color: black;
+  font-size: 1rem;
+}
+
+.colorsaxs {
+    color: black;
+  font-size: 1rem;
+    padding-top: -9px;
+    padding-bottom: -9px;
+}
+
+
+.colorss {
+    color: ;
+  padding-left: 10px;
+  font-size: 1rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.colorsd {
+    color: ;
+  padding-left: 10px;
+  font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.borderss{
+    
+    border: 1px solid black;
+    border-radius: 10px;
+    
+scroll-snap-align: center;
+  padding: 0px 0px;
+  
+}
+
+
+.wrapper {
+  display: flex; /* Menampilkan elemen secara horizontal */
+  overflow-x: auto; /* Memungkinkan scroll secara horizontal */
+  scroll-snap-type: x mandatory; /* Mengaktifkan efek scroll snap */
+  gap: 10px; /* Menambahkan jarak antar kartu */
+  padding-right: 16px; 
+    padding-left: 16px;/* Menambahkan ruang di sekitar container */
+    height: 100%;
+}
+
+.wrapperx {
+  display: relative; /* Menampilkan elemen secara horizontal */
+   gap: 0px; /* Menambahkan jarak antar kartu */
+   min-width: 100%;
+}
+
+
+.wrappe{
+    height: 100%;
+    border: 0px solid #ddd;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-3dlight-color: aqua ;
+    gap: 10px;
+}
+
+.wrapper::-webkit-scrollbar{
+    width: 0;
+    
+    
+}
+
+.wrapper .item{
+    min-width: 300px;
+    height: 100%;
+    line-height: 110px;
+    text-align: center;
+    background-color: #ddd;
+    margin-right: 2px;
+}
+
+.scroll-container {
+    display: flex;
+    transition: transform 0.1s linear;
+}
+
+/* Media Queries */
+
+    /* Laptop */
+    @media (max-width: 1300px){
+
+        .slider-container .slider-item{
+            height: 70vh;
+
+    }
+    /* Tablet */
+    @media (min-width: 768px){
+
+        
+.slider-container .slider-item{
+            height: 150vh;
+
+    }
