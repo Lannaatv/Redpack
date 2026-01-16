@@ -1,0 +1,2799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <meta name="theme-color" content="#000000">
+  <title>TernakGame - Gemshort</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- i will provide this in description  -->
+  <link rel="stylesheet" href="css/slick.css" />
+  <link rel="stylesheet" href="css/slick-theme.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/select2.min.css" />
+  <link rel="stylesheet" href="css/select2-bootstrap4.min.css" />
+
+  <link rel="stylesheet" href="css/slick-animation.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cssx/style wrapper.css" />
+  <link rel="icon" type="image/jpg" href="images/icon.png">
+            
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+            
+    <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="sliders.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="slider.css">
+
+      <style>
+  .popup {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0px;
+    opacity: 0;
+    transition: all .2s ease-in;
+    left: 0px;
+    visibility: hidden;
+  z-index: 9999;
+}
+
+.popup__content {
+    width: 350px;
+    text-align: center;
+    position: relative;
+    margin: 45vh auto;
+  margin-left: 38%;
+}
+
+.pop__image {
+    width: 100px;
+    height: 100px;
+  
+       
+}
+
+.popup--show {
+    opacity: 1;
+    visibility: visible;
+}
+  
+  
+  
+  
+  
+  
+  
+      #scrollToTopBtn {
+  display: none; /* Sembunyikan tombol secara default */
+  position: fixed;
+  bottom: 20px;
+  right: 13px;
+  z-index: 99; /* Pastikan tombol berada di atas elemen lain */
+  border: none;
+  outline: none;
+  background-color: red;
+  color: black;
+  cursor: pointer;
+  padding-top: 15px;
+padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 33px;
+  border-radius: 10px;
+  font-size: 18px;
+        width: 10%;
+         
+}
+ 
+  
+    
+                .card {
+            width: 180px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            margin-top: 10px;
+            scroll-snap-align: start; /* Efek lengket */
+            transition: transform 0.2s;
+            margin-left: 0px;
+            margin-right: 10px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .card .content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card .content h3 {
+            margin: 10;
+            font-size: 15px;
+            font-bold: 20px;
+        }
+            
+            
+
+            
+              .cardsi{
+    background: white;
+    border-radius: 12px;
+    min-width: 95%;
+  }
+  
+.card-info {
+    margin-top: 10px; /* Jarak antara card dan informasi */
+    padding-bottom: 10px;
+            padding-left: -100px;
+            padding-right: -100px;
+    display: flex; /* Mengaktifkan flexbox */
+    justify-content: center; /* Menyelaraskan item di tengah secara horizontal */
+    align-items: center; /* Menyelaraskan item di tengah secara vertikal */
+    gap: 150px; /* Jarak antara elemen */
+  
+  }
+            
+            
+.cardx-info {
+    margin-top: 10px; /* Jarak antara card dan informasi */
+    padding-bottom: 10px;
+            padding-left: -100px;
+            padding-right: -100px;
+    display: flex; /* Mengaktifkan flexbox */
+    justify-content: center; /* Menyelaraskan item di tengah secara horizontal */
+    align-items: center; /* Menyelaraskan item di tengah secara vertikal */
+    gap: 80px; /* Jarak antara elemen */
+  
+  }
+            
+   
+.cardxx-info {
+    margin-top: 10px; /* Jarak antara card dan informasi */
+    padding-bottom: 10px;
+            padding-left: -100px;
+            padding-right: -100px;
+    display: flex; /* Mengaktifkan flexbox */
+    justify-content: center; /* Menyelaraskan item di tengah secara horizontal */
+    align-items: center; /* Menyelaraskan item di tengah secara vertikal */
+    gap: 110px; /* Jarak antara elemen */
+  
+  }
+   
+.cardxxx-info {
+    margin-top: 10px; /* Jarak antara card dan informasi */
+    padding-bottom: 10px;
+            padding-left: -100px;
+            padding-right: -100px;
+    display: flex; /* Mengaktifkan flexbox */
+    justify-content: center; /* Menyelaraskan item di tengah secara horizontal */
+    align-items: center; /* Menyelaraskan item di tengah secara vertikal */
+    gap: 55px; /* Jarak antara elemen */
+  
+  }
+   
+            
+            
+                     
+
+  .card-info h3 {
+    font-size: 18px;
+    color: black;
+    margin: 0; /* Hilangkan margin default */
+  }
+            
+.cardx-info h3 {
+    font-size: 18px;
+    color: black;
+    margin: 0; /* Hilangkan margin default */
+  }
+            
+.cardxx-info h3 {
+    font-size: 18px;
+    color: black;
+    margin: 0; /* Hilangkan margin default */
+  }
+            
+.cardxxx-info h3 {
+    font-size: 18px;
+    color: #f9f9f9;
+    margin: 0; /* Hilangkan margin default */
+  }
+            
+
+  .detail-button {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    border: 2px solid white;
+    font-weight: 900;
+  }
+
+  .detail-button:hover {
+    background-color: black;
+              color: white;
+    border: 2px solid white;
+  }
+  
+  
+    .card-link {
+    text-decoration: none; /* Menghilangkan underline pada link */
+  }
+  
+  
+  
+  .cardx {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 10px;
+            scroll-snap-align: center; /* Efek lengket */
+
+  }
+            
+  .cardxx {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 10px;
+            scroll-snap-align: center; /* Efek lengket */
+
+  }
+            
+  
+  .cardx video, .cardx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+              
+  }
+            
+.cardxx video, .cardxx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+            
+  
+  .cardx video {
+    opacity: 0; /* Awalnya video tersembunyi */
+  }
+            
+  .cardxx video {
+    opacity: 0; /* Awalnya video tersembunyi */
+  }
+            
+         .vid{
+            width: 100%;
+             height: 100%;     
+            }
+            
+.pendek {
+    width: 130px; /* Tentukan lebar elemen */
+    white-space: nowrap; /* Jangan pindahkan teks ke baris baru */
+    overflow: hidden; /* Sembunyikan teks yang melampaui batas elemen */
+    text-overflow: ellipsis; /* Tambahkan elipsis (...) */
+    border: 0px solid #ccc; /* Opsional, untuk melihat batas elemen */
+}
+            
+.pendeks {
+    width: 100px; /* Tentukan lebar elemen */
+    white-space: nowrap; /* Jangan pindahkan teks ke baris baru */
+    overflow: hidden; /* Sembunyikan teks yang melampaui batas elemen */
+    text-overflow: ellipsis; /* Tambahkan elipsis (...) */
+    border: 0px solid #ccc; /* Opsional, untuk melihat batas elemen */
+  text-align: center;
+}
+            
+            
+.cardd {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 650px;
+  padding: 150px 0px 50px 0px;
+  background: #121017;
+  border-radius: 24px;
+             margin-right: 0px;
+    margin-left: 0px;
+            
+}
+
+.cardd img {
+  max-width: 280px;
+  width: 35vw;
+  height: 300px;
+  object-fit: cover;
+  margin-left: -60px;
+  margin-right: 30px;
+  border-radius: inherit;
+  box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
+}
+
+.cardd h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.cardd h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.75;
+}
+
+.cardd p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  opacity: 0.5;
+}
+
+.cardd button {
+  border: 1px solid #f8f8f8;
+  background: transparent;
+  color: #f8f8f8;
+  font-family: inherit;
+  padding: 16px 26px;
+  font-size: 16px;
+  border-radius: 40px;
+}
+
+@media (width <= 600px) {
+  .cardd {
+    margin: 0 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 60px;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .cardd h2 {
+    margin-right: 0;
+    font-size: 26px;
+  }
+
+  .cardd img {
+    margin: 0px 0 30px 0;
+    width: 100%;
+     
+    height: 250px;
+  }
+
+  .cardd p {
+    max-width: 360px;
+  }
+}
+
+@media (width <= 440px) {
+  .cardd img {
+    height: 45vw;
+    width: 45vw;
+    border-radius: 50%;
+    margin: -140px 0 30px 0;
+  }
+}            
+            
+  .boxs{
+  border-radius: 10px;            
+  }              
+            
+button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+  font-family: "Euclid Circular A";
+  font-size: 20px;
+  width: 100%;
+  text-decoration: none;
+  
+}
+  
+  button:focus {
+    outline: 2px transparent; /* Outline khusus */
+}
+            
+:is(.navbar, .burger, .dropdowns) {
+  position: fixed;
+  top: 0;
+}
+            
+.burger {
+  border: 0px;
+  z-index: 3;
+  right: -10px;
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  background-image: url("menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  top: -15px;
+  padding: 0px;
+}
+
+body.open .burger {
+  background-image: url("close.svg");
+}
+            
+.dropdowns {
+  z-index: 2;
+  top: 54px;
+  left: -9999px;
+  right: 10px;
+  padding: 14px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition-duration: 0.3s;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+   
+}
+
+.dropdown > button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 12px;
+  opacity: 0.4;
+  height: 40px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.dropdown:hover .dropdown-menusss {
+  opacity: 1;
+  visibility: visible;
+  translate: 0 0;
+}
+
+.dropdown:hover .dropdown-menus {
+  opacity: 1;
+  visibility: visible;
+  translate: 0 0;
+}
+
+.dropdown:hover .dropdown-menuss {
+  opacity: 1;
+  visibility: visible;
+  translate: 0 0;
+}
+
+.dropdown-menusss {
+  display: grid;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.6s;
+}
+
+.dropdown-menus {
+  display: grid;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.6s;
+}
+
+.dropdown-menuss {
+  display: grid;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.6s;
+}
+
+.dropdown-menusss > button {
+  color: #f9f9f9;
+  padding: 0 24px;
+  font-size: 14px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.dropdown-menus > button {
+  color: #f9f9f9;
+  padding: 0 24px;
+  font-size: 14px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.dropdown-menuss > button {
+  color: #f9f9f9;
+  padding: 0 24px;
+  font-size: 14px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.dropdown-menusss > button:hover {
+  opacity: 0;
+}
+
+.dropdown-menus > button:hover {
+  opacity: 0;
+}
+
+.dropdown-menuss > button:hover {
+  opacity: 0;
+}
+
+.dropdowns::before {
+  content: "";
+  position: absolute;
+  left: -9999px;
+  background: #202024;
+  border-radius: 6px;
+}
+
+@media (width < 500px) {
+  body.open .dropdowns {
+    left: 10px;
+    opacity: 1;
+    visibility: visible;
+    translate: 0;
+  }
+
+  body.open .dropdowns::before {
+    inset: 0;
+  }
+
+  body.open img {
+    display: block;
+  }
+
+  .dropdown-menusss > button {
+    min-height: 40px;
+  }
+  
+  .dropdown-menus > button {
+    min-height: 40px;
+    
+  }
+  
+    .dropdown-menuss > button {
+    min-height: 40px;
+    
+  }
+
+  .dropdown > button:is(:focus, :hover) {
+    opacity: 0.7;
+  }
+
+  .dropdown > button:focus > img {
+    rotate: -180deg;
+  }
+
+  .dropdown > button:focus ~ .dropdown-menusss {
+    height: 120px;
+  }
+  
+    .dropdown > button:focus ~ .dropdown-menus {
+    height: 250px;
+  }
+  
+      .dropdown > button:focus ~ .dropdown-menuss {
+    height: 80px;
+  }
+
+  .dropdown > button > img {
+    margin-left: auto;
+  }
+  
+  
+  
+}
+
+@media (width >= 500px) {
+  button {
+    font-size: 16px;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .dropdowns {
+    position: static;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: transparent;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdowns::before {
+    display: none;
+  }
+
+  .dropdowns {
+    translate: 0;
+    width: auto;
+  }
+
+  .dropdown {
+    height: 0px;
+    width: 180px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .dropdown > button {
+    padding: 0 8px;
+    opacity: 0.6;
+    height: 72px;
+  }
+
+  .dropdown > button > img {
+    display: block;
+  }
+
+  .dropdown:hover > button {
+    opacity: 1;
+  }
+
+  .dropdown-menusss {
+    position: absolute;
+    top: 30px;
+    padding: 6px 24px 10px;
+    height: 135px;
+    width: auto;
+    overflow: visible;
+    opacity: 0;
+    visibility: hidden;
+    background: #202024;
+    border-radius: 6px;
+    place-items: start;
+    translate: 0 24px;
+    transition: 0.3s;
+  }
+  
+    .dropdown-menus {
+    position: absolute;
+    top: 30px;
+    padding: 6px 24px 10px;
+    height: 250px;
+    width: auto;
+    overflow: visible;
+    opacity: 0;
+    visibility: hidden;
+    background: #202024;
+    border-radius: 6px;
+    place-items: start;
+    translate: 0 24px;
+    transition: 0.3s;
+  }
+
+  
+      .dropdown-menuss {
+    position: absolute;
+    top: 30px;
+    padding: 6px 24px 10px;
+    height: 90px;
+    width: auto;
+    overflow: visible;
+    opacity: 0;
+    visibility: hidden;
+    background: #202024;
+    border-radius: 6px;
+    place-items: start;
+    translate: 0 24px;
+    transition: 0.3s;
+  }
+
+  
+  .dropdown-menusss > button {
+    padding: 0;
+    margin: 0;
+    opacity: 0.6;
+    height: 40px;
+  }
+    .dropdown-menus > button {
+    padding: 0;
+    margin: 0;
+    opacity: 0.6;
+    height: 40px;
+  }
+  
+      .dropdown-menuss > button {
+    padding: 0;
+    margin: 0;
+    opacity: 0.6;
+    height: 40px;
+  }
+  
+  .move{
+    position: relative;
+    margin-top: 380px;
+    display: block;
+   
+}
+
+                .cards{
+    background: rgba(20, 20, 20, 0.5) !important;
+    border-radius: 0px;
+    width: 50%;
+                  max-width: 100%;
+    margin-bottom: 10px
+
+  }
+  
+  .cardx {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    margin-bottom: 10px;
+            scroll-snap-align: center; /* Efek lengket */
+
+  }
+  
+        #scrollToTopBtn {
+  display: none; /* Sembunyikan tombol secara default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99; /* Pastikan tombol berada di atas elemen lain */
+  border: none;
+  outline: none;
+  background-color: red;
+  color: black;
+  cursor: pointer;
+  padding-top: 15px;
+padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+        width: 7%;
+         
+}
+
+}
+
+.navbar {
+  z-index: 1;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 44px;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.5) !important;
+  color: #f9f9f9;
+  backdrop-filter: blur(10px);
+  gap: 100px;
+}
+
+            a{
+              color: #f9f9f9;
+            }
+            .logo{
+                        width: 100px;
+              height: 27px;
+  margin-left: -5px;
+              margin-top: 3px;
+              
+            }
+            
+  
+ 
+  
+                .cards{
+    background: rgba(20, 20, 20, 0.5) !important;
+    border-radius: 0px;
+    width: 100%;
+    margin-bottom: 10px
+
+  }
+  
+  
+.cardxu {
+
+  overflow: hidden;
+  position: relative; /* Penting agar pseudo-element '::before' berfungsi */
+  cursor: pointer;
+  border-radius: 12px;
+
+}
+
+.cardxu-image {
+      width: 100px;
+    height: 100px;
+    border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+  position: relative; /* Pastikan gambar tetap di bawah overlay */
+  z-index: -1; /* Tetap di bawah overlay */
+}
+
+.cardxu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Warna overlay gelap */
+  transition: opacity 0.3s ease-in-out;
+  z-index: 0; /* Pastikan overlay di atas gambar */
+  opacity: 0; /* Awalnya tidak terlihat */
+}
+
+.cardxu.clicked::before {
+  opacity: 1; /* Tampilkan overlay saat card diklik */
+}
+
+.cardxu.clicked .cardxu-image {
+  transform: scale(1.2); /* Efek zoom */
+}
+  
+  main{
+    display: grid;
+    max-width: 120000px;
+    margin: 0 auto;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 0.1fr));
+    margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+  
+  .parent{
+    margin-top: 20px;
+    
+  }
+  
+  </style>
+  
+</head>
+
+<body>
+     <nav class="navbar">
+         
+                            <a href="home.html" class="navbar-brand">
+  </a>
+
+      <button
+        onclick="document.body.classList.toggle('open')"
+        class="burger"
+      ></button>
+      <div class="dropdowns">
+
+        <div class="dropdown">
+          <button>
+            Support
+            <img src="chevron.svg" />
+          </button>
+          <div class="dropdown-menuss">
+ 
+            <button><a href="#readme">Readme</a></button>
+            <button><a href="Donasi.html">Donasi</button></a>
+           </div>
+        </div>
+      </div>
+
+            </nav>
+ 
+ 
+<ul
+                      class="ratting-start p-0 m-0 list-inline text-primary d-flex align-items-center justify-content-left">
+          </ul>
+    <!-- slider section -->
+ 
+    
+ 
+
+                     <div class="moveb">
+             <input type="text" id="filter"  placeholder="Cari apa??" class="padding"  class="form-control form-control-lg shadow-none"/>
+
+                       
+                       
+
+            
+<main class="parent">
+  
+  <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/A Cat Story.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHTIUQl0TTS1QCtTPUjUB0GHAk3YciCfKhnS0aTP-gtJEhtoidEtGWPJlT&s=10" class="cardxu-image">      
+  </div>
+      <div class="pendeks">A Cat Story</div>
+    </div>  
+  </td>
+
+  
+
+  
+  
+  <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Angry Bird Helloween.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvtPw-XyfkG59XNNYOjqfVtwcfedZZ3UONK6C9D2B61pCK-IJV7hBoIzk&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Angry Bird Helloween</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Badminton Power.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCPFU0w29OHQASHRzql3YUmMorMNcuFRF4r6ED_-iKiDRedcTdhsYOUa7k&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Badminton Power</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Ball Drop.html">
+      <img src="https://img.tapimg.net/market/images/FgBeUVW5ypfnoJ5olDfJNAZ4KF8m.jpg/appicon_m?t=1" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Ball Drop</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Basketball Legend.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9zD5sXaM6mitLQLKQA9CS90r1OQzrXSq6UpqNzHQW5cbXG4XG_j_gbSYg&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Basketball Legend 2020</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Battle Force.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdk4-q1y6SgX_aQYOTrG6JL790WR38FzIRVMUyHzUOxNvFWW5_NJzzcwM&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Battle Force</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Blazing Blades.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSukaWupxH7v7N0NNxlKswqtrLmnyCF8IPH0YZ8XkO_oerYX_zfWXhoEcm6&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Blazing Blade</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Blumgi Ball.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkot3RiFWkmW4V27nHck0AIdn-HSvBsFbbQXgMfUvyhSUgs7d9U9JKCZQ&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Blumgi Ball</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Blumgi Castle.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcd9GWdZscZuESpEbnSrzc5xENKJ0_0P1kdabu5pWlrE0uWXSh_c45cv8z&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Blumgi Castle</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Blumgi Merge.html">
+      <img src="https://play-lh.googleusercontent.com/vogyKKEJDixsIRG4QiYHzxqlGGLj9UaYvUMkpL-CXQ5XOp4yYRRohu08mW0jKVqh7A" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Blumgi Merge</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Boost Buddies.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv5rtVbqkaSfeGChScHQelgA6quOxtOBpeA5u94tIDojDVniBaTvCXwrY&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Boost Buddies</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Bottle Flip.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB6H4b_R9W3TjCjywwE6CzJyynSpd5soNWdasEfAOWbRZNVLEmO4NOU5k&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Bottle Flip</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Bow Mania.html">
+      <img src="https://play-lh.googleusercontent.com/Astm0Rc3YZT_6VoGXvN8jA7rl1fzZDZawq5H1EPWz1Udot_FyKXnZVEHmdFkj6T3MUQ" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Bow Mania</div>
+    </div>  
+  </td>
+  
+  
+  <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Brain Test.html">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/77/e8/61/77e861c2-a1e7-24bc-fb8d-6a2dca8672b3/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/256x256bb.jpg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Brain Test</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Brain Test 2.html">
+      <img src="data:image/png;base64,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" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Brain Test 2</div>
+    </div>  
+  </td>
+  
+  
+  <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Brain Test 3.html">
+      <img src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/311e1411784d5e63172e8fed86952517.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Brain Test 3</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Breakoid.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZcTf1MBLsg1qKvD6yQyueLcMB7_kV6G_EpyykeOrrj_evmrhAKFjDSyYZ&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Breakoid</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Bridge Race.html">
+      <img src="https://assets.myket.ir/icons/xlarge/com.Garawell.BridgeRace_16524218-0135-440f-878a-f3c69c2b29c3.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Bridge Race</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Bunny Jump.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2aqfkmmtLrUiGjSukcVmyIC3PfyijC_EsL5qwb9H-lwKkvjlg135bJQYe&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Bunny Jump</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Casual Cube.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm0RQwgXEmM82j4aUlOOcwTq0e-Xz1ylrqHXceOobBkaJib3zBewGBLbQs&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Casual Cube</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Cat Disco.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-_d36FDLBklpaNNpzHyh2vXuFfeAxXFPnDoQO_sMJA-JD3wL1MSS1YgoN&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Cat Disco</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Cat Pizza.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2_Iv2HkWvBjiH1qy5hQKVmui1XYPnY2AW2N4LAQDYTmLMPuH1OGcSrkyi&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Cat Pizza</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/cats.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtx6HGpWqNJINrJEXbmsDt_ReC2MHNM8UiiCVxs2THSnd9YRmIXsV1k3sE&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">C.A.T.S</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Chees 3D.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiw_Fm4XPA_Mi2cqNymvL6Eu1wpYoZpzk-hgGwdfgRtLdvMan-Rr_13JU&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Chess 3D</div>
+    </div>  
+  </td>
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Chicken Scream.html">
+      <img src="https://imgs2.dab3games.com/chicken-scream-race-ft94.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Chicken Scream</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Cool Archer.html">
+      <img src="https://gamebol.com/public/upload/game/thumb-UDNxRL5YQ5.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Cool Archer</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Crab And Fish.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjKckSZPA-AqbpZTULpbAGOodBsE5_W3Imi9_ouSJcLTz-dN2E7FYaGtyYhvOMOR7Zf7dSMQb1kam1gNL3yo8Pmroiu-VKlcDK7RlMJQYHu7w_H2ExsXEQzMMLn5urpRvaHlBPjABSBd6w4GW9fEWH_bdzy9r_QnBbEKHm63s94jcqoOZ6_6Gjim3lnWQ/s320/IMG_20250521_130306.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Crab And Fish</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Cut The Rope.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRg6sWTo-vMNXQlivBq6R2zH7Q-ezqxnK3PbJunQRCpZ1-6cbDm-wkGcd-ugSW0jor5mFCu_7d78ang-3-ATXlMidlafZE-0youovG_SxSwnYDYqwvoYfCwMEj70946b9bFEcKC9Ffs_4dcyX3xzThq4skVdbFCyj6y2fjDi3djzMAyUszXd_QF-fdofo/s320/images%20-%202025-05-17T110000.374.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Cut The Rop</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Cut The Rope Time Travel.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHL9MmPXgZX96M5MLYY3y42URC7a9VYC-cHH-gUV1Dze0RKz71YWs16lC6u4G2CqI5la-f65lrDQIB5uhz72gMpCz247c-JNbX_1CRJqNQf79gWP26nw5tPlgrQS0ITrB4LQQ8O1g-d0QFlNP8STx0CxcuPR1sJgvih1JH3UpIPjHHbtPnmJ_tta3nx3A/s320/images%20-%202025-05-21T160447.102.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Cut The Rope Time Travel</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Dadish.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq1IohdN8CpqGELVFd-zK6fE_CawQ4t8tcTRN6V5phAaRK6hpMjWjYAdM&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Dadish</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Dadish 2.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVxMyRpctWtI2U5Vgz3_p4N5tKMwRBFQAcwVg4PfOS09IDAFE-ndTBAMXo&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Dadish 2</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Dadish 3.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5sHmMNvVZh36N1-LqrugenacoOjTa05A4XIvdHk5lkI2lI8HcZT1CgNBbknjrhFyRmZfreZTfgAzfdPPwzrJ6Qcp6Tq9hsWNcPqjsExmT7-0PTa69j7ouc2Hmziy-sj2U8WvMgJPyFpA_qAdIwr5moasno5qsixI8c50gmzKuxrO6fSItwDLFvm4EWfI/s320/images%20-%202025-05-17T151223.030.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Dadish 3</div>
+    </div>  
+  </td>
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Dana Relics For Sale.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyapFFTtIjfF2bPMc2TwHatLTsTW-cG_Pa-VRAVqPtewfIbfUdPpclCuk&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Dana Relic For Sale</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Doodle Road.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-cpZOJeo3KyrlirM691uB6Q8-G3RImxJm569j2iSgS9v0aZhCvE0jAhS-wfY1dcclVObHGgO6L-WHforY4gO8kj3gO4IBCI0Jjx_J5ynEPbchoR7x0_nDHULl-OivEdbMDIB-tICKGyaOecADDGRr6Wf4yZ3y-w4H3kRXqgVnoc3nqLWTGLNuYLXfV-4/s320/images%20-%202025-05-17T063434.464.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Doodle Road</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Draw Climber.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJpnlduYb9kBPe6nDRI562jvDh-7yp3tLTNGKsQv4w1sDMuD51H5ac0hI&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Draw Climber</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Drift Boss.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSeZisgfPT3EGvn54P_G8Se4SAILDeApBSrEgRABcNGZcD1JsBklxH0MPTqBzftLK4Bxt_oalFjMuFV_bluqo756KqJ1p0x6uSHrcyXMMj0Kb8Xh6TzWTqYIRzWfIqaqgf13G22YuPLxmm6QvGGGqaJnhTT9n83JE_-kPbBk70tuHN0HXD4ys4C3GWXf8/s320/images%20-%202025-05-17T064118.440.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Drift Boss</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Dual Cat.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsSh1VeZMNoF51BI9OKljixJtybJxyK9ycGrkwQUI0ykoGqmyQu4ySy7we&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Dual Cat</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Duck Park.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8REczz-xi-PqDjgogqXDflct3K-bAmv4XrQ&usqp=CAU" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Duck Park</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="https://6602.play.gamezop.com/_game-files/HJskh679Cr/index.html?id=6602&lang=en">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpRNQXhSyvLISJ_9uDUg92ac7pN0Krz2mDVR5lo-yVMdIGoqYmmRKERgc&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Enchanted Waters</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Fall Jelly Man.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTkUpLuPoLGVuCqxfiKF9nWeqAgrvMdbjKZQ&usqp=CAU" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Fall Jelly Man</div>
+    </div>  
+  </td>
+  
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Fall Race 3D.html">
+      <img src="https://fallguys.onl/upload/cache/upload/imgs/fall-race-3d-m240x240.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Fall Race 3D</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Fancy Pants.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYXHdUXZdMWKv3goIwWqCsRn0kMR_Kw2Q1tUGUYaxFbXBiHxBYP3I6-vuq&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Fancy Pants</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Fancy Pants 2.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7UmNBccyQP_T2yVzVTYQyOiZ9b7fAknGEW4tNV9lj1v3_1j6LOM8oe-g&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Fancy Pants 2</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Fancy Pants 3.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR50n4pccIK5vIh4f-78g32y1RvWODe8XCnSLxZ5OXLSvZgXRaRTbugGwk&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Fancy Pants 3</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Fixing Time.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp0lNV8MOyLg7bNZCEs9NddcodJlJNkBaV1SpD3XRrROMr_tqSk647ecE&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Fixing Time</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Foxy Land.html">
+      <img src="https://static.keygames.com/4/116414/102416/1024x1024/foxy-land.webp" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Foxy Land</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Fruit Chopper.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC9eoUncl9znS2Pae7LpEDwesWwgkk4EpFrHBJxeif2c0C39PWgXPL2n3g&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Fruit Chopper</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Fun Race 3D.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd0RuwNvWlS6q9fXIx6aF9N62fCriwq_CcZu5p8g6k_g6-bTFwAW9-oJg&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Fun Race 3D</div>
+    </div>  
+  </td>
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Geometrical Dash.html">
+      <img src="https://geometrydashmeltdown.io/upload/imgs/geometry-dash-lite1.jpg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Geometry Dash</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Gobble.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitKm6yswBFhHhPG3rjyqd3JD23M4-ZKdBMHD4LJbV8RyEgq797QKg4Z54CR4YVRtcLvbK2lYL9b0Aq_p7ESMEb71f79U-OGAlI0TLSsxBroPV5x95b0Y2G6SG06mg9aMROlG68LAv383y_ql48Pl9BLt8TlGk66Yeziw7_Op9_CnIez5e1ib95EwVG5wY/s320/images%20-%202025-05-17T151324.715.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Gobble</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Golfinity.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgeLJT6ZpU8QiOuWrgwzJMEIWoxV8S8QK9ccwej3gMLoWsRN1mXcpRIyo1ghqjsiTh4Q8hm43l5cKH8wOPIM8IxSOR0bal0egg2rRVXvTVB9L45A94QPnLKERm0JNYm4Bck6DfGeit1tvhPSGOpXYlwrPqnMPVa32_SvEGguENqWbj_n2rdgNGmgjy31Y/s320/images%20%2813%29.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Golfinity</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Guess Their Answer.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDpVgfpTFvW4uUyRP_Yn2S13K0U5X-Icm3s8Ku0-ZRQtX0BYiOlrTSZ6C2WIFyQTUM253Q5TSi1YQXwCl_1MXzOys8V3Y_nSnuIwGhoAtUTVtKGgqJ0Kz2eYCsMHeq6Yy-6NTbrempvcIQh8oYVzjs9BXU1Oq2YNYpfnfh8kshDe3fS98lg_HEg88x_4I/s320/images%20-%202025-05-17T104725.062.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Guess Their Answer</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Happy Glass.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcFTnslMheIFMFsE5dY3qrXxiNTu1rwVkOodgWna-V33GnaurwrjHQfl6m&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Happy Glass</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Happy Glass 2.html">
+      <img src="https://www.mafa.com/cdn-cgi/image/quality=78,format=auto/thumb/300x300/Happy-Filled-Glass-2.jpg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Happy Glass 2</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Happy Glass 3.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjikvJSOQ1kwyobWhZN6-55x87DPMIw2VzZMJY1j3GtmL4EOi2QhthRGsOD2h8oOZqILG47nNNGYMoFCgWd0u2lHW8-NazrFKPatQAiShGIVPIU0Ub5jSKGUZPVdsV5ao4hxtZXvQALolv2GYJw3eI6pM0eB3EfCodYn5YRuc7UsSM05JqsM4xnaFD5wqY/s320/images%20-%202025-05-17T110141.941.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Happy Glass 3</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Helix Jump 2.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWxUu6rlTxOfMhk1RBtpQ68sJVE09fOj5Gr9eh0HZ6o-tVbw4LI1hlnkaxTcTvMn99SOYQlJCwhJLBqG47IUakF0SHnLszWGM8aMOA2kWLnOgotSqgP1yHl7fam9fRf0FRGp-YP9fHZ2tNxIbEUicw4bTPq5fY6q2J-hqZQiuvJNFwhFwlOOS5LHsIE-A/s320/images%20-%202025-05-17T103140.530.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Helix Jump</div>
+    </div>  
+  </td>
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Hexa Fall.html">
+      <img src="https://static.wikia.nocookie.net/fallguysultimateknockout_gamepedia_en/images/c/c5/Hex-a-gone_Trials.png/revision/latest?cb=20210109142809" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Hexa Fall</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Jelly World.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpZ24JBsaQMJYKFKRpJusjbwk6l2DFRzJTQWXfikJcJzu_7ShKAgkt_H8&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Jelly World</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Jetpack Joyride.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSrxc6CU2OgDT1dHFE725ZptrlGm_l1vHL2HCFrDDBhuM4Va2LphVed83riAcwCWBCKDOs4VA9Noi5i-P5R3mNnJJIOdKwQexFIv6C276Dp4LuxSZ-T7dlBprNPvhlzPxszrYyTvI5tH71oks-sngwvRK-DYchfWoBE3wohiitjVJ6EYkdZawjAB_jTiM/s320/images%20-%202025-05-17T120207.402.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Jetpack Joyride</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Jurrasic Run.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaepzU1P3aMalMVaCJYjQKlP65rC8bkp-zWztp7kuBgIm2aomoHvx8rZo&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Jurrasic Run</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Kart Racing Pro.html">
+      <img src="https://a.silvergames.com/j/b/kart-racing-pro.jpg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Kart Racing Pro</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/     .html">
+      <img src="https://static.playhop.com/images/3dc0f_1881364_9400d/34d175515/2a000001961c07b2_d5f7211/86865167609fa2f65c08_55282b/orig" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Kitten Never Dies</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Klung.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pQFZe1oi9-i-hYXszRkLy1G1RrxAqZqAI5FcN0NKVVo4SBh4mVNvHIo&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Klung</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="https://6602.play.gamezop.com/_game-files/H1PJn6mqAr/index.html?id=6602&lang=en">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcMZuxBtHmc3zkHCuozR8Ersfz56NcOssdwhfx9cdfsXo-2SPbgAsBpMH2&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Knife Flip</div>
+    </div>  
+  </td>
+  
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Knifes Master.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcm-Zh0-wtybEExmqyh00kER9rGSl4sSkLzu9iLaBPjQJF86TUH6GWfcs&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Knifes Master</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Knifes Smash.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh8vVPc41GYf4i_SOiNkBF5XZBdbCft8OJq_yaOT3S7pv-Dg4CAzLf5Dg&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Knife Smash</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Level Devil.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRfrqMBkaOL8sGaHZRopYL7u3vLJHBq5XIQivWFB_jPXQtSHuyRx1lVXSp&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Levil Devil</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Little Gun.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuz17SEph93SYvqgqE3r-Czef-AdlmYmtTaH7nTdVt2hCyXUGOMyZpYOk&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Little Gun</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Lord of Gomoku.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg2IYjI5z1S6ZCosNR1zWhBbHbU455lqWXgVqGHp8AEo2L7a_6K5x2IiqI&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Lord Of Gomoku</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Ludo Fever.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFjhvHKgu0Pw245LI9HTCOfHO9q6j3Xf7f7d8gGRvvE1-RMMRepoM9XMYYMmQaKyRN3FjDwXxxIG_6sKGVgv-r4gpEJp-nPdM6pkPJnTZNcPwplFN60rYqs7Qc7x3EdQAo1ezMs26VVY6todP95ttOuvSBunJVWqhKNwSWRPPRfGITSiU0yOPBM_GIk7I/s320/IMG_20250522_170057.jpg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Ludo Fever</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Ludo Hero.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXTNxby0ls4dy812lYHAGIUgaPahcQkTjH1rV4Yvz_Lq5yS0y_FOSg4Yk&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Ludo Hero</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Ludo Masters.html">
+      <img src="https://play-lh.googleusercontent.com/w4hT0PH6yHVUY3trO3ICmTOzGt9x3UPrwZsC9uAF3CmuCPtS2CD6lwjUIeEIqcjxHEw" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Ludo Master</div>
+    </div>  
+  </td>
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Mad Gunz.html">
+      <img src="https://magbei.com/wp-content/uploads/2023/06/mad-gunz-online-game-game-online.jpg.webp" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Mad Gunz</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Solitaire Classic.html">
+      <img src="https://cdn11.bigcommerce.com/s-u0v3cvo4an/images/stencil/598x336/products/20945/147456/big_icon__32676.1699445030.png?c=1" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Mahjong Solitaire</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Mega Parkour Obby.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuiPcoSUEWOCWiV4jS9EZt0YtGdHs2MGc1ouMS3mHmyMq9VlXvm9H9_uA&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Mega Parkour Obby</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Mine Rusher.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ2__Hy-9M739kjOtm9E6qZ2FTHitLX24nhHOd8Gj7TQKK6JKRJYcNGmy6&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Mine Rusher</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Music Line.html">
+      <img src="https://play-lh.googleusercontent.com/k7_f6TctoF1PJwFWRE18SHoETPOPb2HPNjDJnxFnJCMR5QaPVkUJrx4l0rMnX-om0Q" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Music Line</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Om Nom Connect.html">
+      <img src="https://omnomconnectclassic.h5games.usercontent.goog/v/6bc88dac-9f6b-4f2f-8c85-e715c899bb63/high_res_icon.jpg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Om Nom Connect</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Om Nom Run.html">
+      <img src="https://static.wikia.nocookie.net/cuttherope/images/f/f6/Ugvf.png/revision/latest?cb=20201028113537" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Om Nom Run</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Only Jump.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1Jl7GPfhN61CGyWCKmR76NcEZl7zjneRcPaayVlnRG-LNzOHWI5Kptq9stdtbcR1zn9m7SqxY-r2OO_VPcPwR91RZxYT-s4sTWtM2OG7STdMs6IW4zlkTp-9IF-RDUc2RO52ixvX5v0r4LugvT9-FfN0Q1Oe7sJv3gKoP-z9G88l-1EkUL4ZNBcnDAeA/s320/images%20-%202025-05-17T063329.753.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Only Jump</div>
+    </div>  
+  </td>
+  
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Panda Kitche .html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG5iVVpTZb2GdN5gKx6sHpNWnLd6_RdK7fMa-JAtkYreasr2OkgbI5Jgu-&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Panda Kitchen</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Papery Planes.html">
+      <img src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=1200,height=1200,fit=cover,f=png/dd61d37a9251417bcc3150e75d736b73.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Papery Plane</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Puzzle Play.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRiQLpPemNNWj_EUcuzI9tQDlaD9jJ2mvtg9qX5M0HmGIGowmR1S3jvSk38SIXRoxHEJiXWYm5oVUyQdL-2VI7YXsE_StzvnNls4RibxCaCyPD_zIDP5-H3g9brRis_Mh4tl_yrNZyZL8dDwcy_YabKXjBpgVaBxxKHPniP_0h3TQbBj2varwkZp57kaI/s320/Picsart_25-05-22_22-21-21-031.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Puzzle Play</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Piano Tiles.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEuBm4At1YqsqobBj3NCrzYbKUpyALaV0N3FAyNnuY5G1ix3F6VRcdEVlO04uAFL5ExPsZWHPosfe-L6jNP5tbUOpFiwK_CfnKvw1fxVQFrf2wrqSZWja_6ig6HMGQdkENib47xUwZWEM60PZRmuViSFvA-WrL91TMwisXV-NT7EsMLijtv3DPhXJy7Kc/s320/images%20-%202025-05-17T150730.883.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Piano Tiles</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Picnic Pinguin.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEI4jzzEYLYSI1lnA1xXSV5N2iNCOqwouH1SVFf0NTAEwleSGho6GbzrFRM4mg6qirpxBaSLK2Kme-TCMXl0lhgNXq4I2aubGr-3LlMBxmfiJ6vRSIePuCAfPiNr2sEh4iLm96iRqQBGjM7ZkM6W-TxvgxgTkv7agzKGsN4JIWNIsM42yRLkd5vxxPRrU/s320/images%20-%202025-05-12T004057.664.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Picnic Penguin</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Ping Pong.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs47bQW-EW62BwgDF0zjiHxp74X_Y56mcsWtsA8P2DHLqZUZPws2Iiyys&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Ping Pong</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Plants vs Zombies.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDIP6E9TO89fuxha_0uI_QBXB65J2x5rdjh99bPBt3GJ2X4qc9I_fiM08q5O2arYoDO96vTwmdb2AOKve796FYEHziU-ZYVHlbdTc7HAycSYwlR-2L6rl95kC1GnEAr-smmg_vI_FFHyIxJGEMQZ5Vi3vBPnmvrMcWxK6_h8E1zsU4jfUxJpau9xGX-kQ/s320/a3788c8c64fd65c470e23e7534c3ebc8.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Plants vs Zombies</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Pogo Penguin.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3E-fd81Wj1ga6j9rj50XkMxhmYJZ9iqB3jPM-KJevSL6WFcdQu6zO4PwV&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Pogo Penguin</div>
+    </div>  
+  </td>
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Pool Swing.html">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8a/93/5d/8a935d78-e1ba-6948-5903-089b24743214/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Pool Swing</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Protect My Dog 3.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTovuv3MX2mC6OZM_BUqehn8ZYkEcG-UoFv0NrToSf-_keZID6BldWSY3G&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Protect My Dog 3</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Puffy Cat.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSERepIBSOiSpzMwxdjpNJKfGwL6LtbfiuIdUGMAoEYm64kp3mAI_qV4PY&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Puffy Cat</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Puffy Cat 2.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS57Py8q_JmufX3SCyqb2rQMLrsHuZ94IpwOMrtQx8KpBWUWui4my1QRGty&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Puffy Cat 2</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Rainbow Obb.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6wEOQckA3vrxvpLGRUcZS-E6BEe61kCqXqlYHJLqq6U2LxDIvq3fjqQw&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Rainbow Obby</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Rally Point 3.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhZLRdqamQTW4GiAPqC9JHCjEc_OHAVi0VzsxDVfBRSt_SzmVNcJT5UI0&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Rally Point 3</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Run Boys.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4DPbA7k_OznjrhIY8WqY1EdQMh5bcaR5_9OGPxgzCBaR5hYSCUKpPzVep&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Run Boys</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Run Hospital.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJi_6W6yzQXRZEjNDYKIGyUZmVWQwQjn6jx4LJy_oxEuvAVCSe3LqTPN4&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Run Hospital</div>
+    </div>  
+  </td>
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/RunRunDuck.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5KtUnFusvFIiOnpy7CjtTksVQphl8kFCfYQ5thUZG8lnHkFBxhIxiy8TlBo3bpUZWqEAJhI-TZZ4VA39BsPD6unnBfdwohvcJEWk_o4ZzMAWshZjuI_8m5JPeOut2ChPMO-szz3ixiNPAodxgxXZKIfyq4yg1e87b-DmL9qG4K74J5ocSCce9mYph9FQ/s320/images%20-%202025-05-17T151949.989.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Run Run Duck</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Sausage Flip.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihBc4_gbYMwiH-1t20IV_CBvzlhG59g_P5t0g6wRfdTYeJzeBkyojcF2jWClZf2yTkprAkqlDhtvbWf37PuU1BnXbx0BbcgsALM3tLmaO9tw7f2s4zenNpdelZEtQK9YMjBaP2-VgTKXSNDGTuzL77U7_PyqT7M6x0z-62NWRAxtdXHw1FJJeTqMy-1FU/s320/images%20-%202025-05-17T070021.670.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Sausage Flip</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Save Pets.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-D1H4EUaEwfEk64fbFZh5FXWmR6_k9hjFHT0zE75gREBS4lrvScGyoHwSeaYOOiSvwwGP-U9ASoCKeEpc9KA_btFoQdRhL12hyV83UTetb5-oEr_rmAypZwRawCxSR-_iKar1L5QbNYj415rKgUzdIvZlesM95HabEQKIxRJSG4J8w-CBbNt3n8shcck/s320/images%20-%202025-05-17T065255.408.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Save Pets</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Scary Hill.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJD_SrwNNIwoDHpCfmBB1MvMkVmKjiV6oe2g&s" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Scary Hill</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Shadow Trick.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjV859owVBa_1vloi6YXsOrnUpu5FUthZo0jLAM6aeLbgfhqX8lxE-Q5IVyGElj9KwQU4bazOW2A4tYflgB2WFJFV4j_u07Vjnz1siciFnGyiitnfuqLJ_6ZUybXJDr8K6x6uLGp0K3rO_MNK6FgwPLArhLveVzBu_lguGhuIytCulZXJ50ednPZPjmXLE/s320/images%20-%202025-05-17T105148.604.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Shadow Trick</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Shady Bears.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaj6Sl_1x-4R74SqArc4RtTFQJhYp52dsnz2x8cprQGnCRea-P9aDDr6X5wwXVX-YOb6cAkNFFF-XFTL9XVmiqnNQwz1kkSngNhyphenhyphenZO5-oCQzIpvk2OvEebsAyuDiNy6oZKdmRxSw4BrGIfVj1U4haumCy5EYIrBlQ4k03Q6nab4_9Bpex2KBFLayEVZlQ/s320/images%20-%202025-05-17T120455.280.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Shady Bears</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Shark io.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgclqWVry_Ub6_6ycfFEzEZP9wZzmoi2H-h7H0UqzGWaahqKiTbkM8T5o&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Shark.io</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="https://joyheart.myfunmax.com/ShortcutPro/game.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXGcWL7UhCuFjHUY6-ZylzHs0tUh6x1vRVgrzjyBVyTMTPHPafONRLzkc&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Short Cut Pro</div>
+    </div>  
+  </td>
+  
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Short life.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0KdGjNn-urhKVTfJXhzktdXN_uz9BLXx7Ovq0J65BNrQyodQh6U_mlVE&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Short life</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Skibidi in the backroom.html">
+      <img src="https://static.keygames.com/1/117001/103008/1024x1024/skibidi-in-the-backrooms.webp" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Skibidi in the backroom</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Slice Master.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQafMQ_k7Y4pEUabYzHCT2BnesGALVk3iqGc86VqYRLEGFTcSnCeTztdzEx&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Slice Master</div>
+    </div>  
+  </td>
+  
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Slice Rush.html">
+      <img src="https://static.gameloop.com/img/3f9af14d260cc4b3849fc5d34da1f055.png?imageMogr2/thumbnail/172.8x172.8/format/webp" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Slice Rush</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Slime Journey.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijcRANKLmYcKPUgMBq_eH4NV6KcHVzGLS_yB6Q8xo8hkfgwc59JpFXuqnOOzGn2Wodkhrt_tSsddrJ08Tb75-4eWr9TPccwr_FM1lCq9xXNWIilw60EmSsUnFib2i2yNI8zIaevZl3DgqggubJYvbRl-ILCfW_CIysCS-bqulUS0YGFgqA1Nu0Bd7SfNg/s320/images%20-%202025-05-17T065803.343.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Slime Journey</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Sling Drift.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNPmPCddoLNEK8CLRcgB_6Yyg3ikH_MeamUtwhCm73YClwND2tv0m72gCpOq2Siskf_L81Ou8CyD3WC6dYw4QmmC7gGMlcQHf2iyjt2ep72oi5FFaPGjZsOVrZkhjDD2yRFZo3ITCbFHWrI1DMIu5uj1U_vcw4kOKkENbkvtLsNWAdfktS8QN8wMt0lAY/s320/images%20%2812%29.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Sling Drift</div>
+    </div>  
+  </td>
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Sling Kong.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivXkWSOh4dgcmZIjiNnSPtzWtIOC2VFy_3_ZNjuAe3Jl8cy9bNQVW_AtbduthLcFU_VHOEx5PZCSHAs2fBzMgC_AqtpSvB8oDMhRZHmLp5Z0I4eMYg7bOljH6CJ6KFykiQCtvytz4nlbkfvtcLgYc1BXL0FpPQ12jlHpuprQbHCkHjTLxf-whRiH3Fgnk/s320/images%20-%202025-05-17T150843.922.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Sling Kong</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/slopey.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1H6AXBAhwqqF0nk2tvgbhx9FvSnYEV7IChUm1imzeySf2rUtozcEi8Wfd&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">slopey</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Smash Karts.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7jdTSAPZizBS8EV2FiAZr-SJcV2nQaw9Tef8jcHpZuKnDrEiPCiqHdHmspu1nNRrKcvMu4dBFAidHN8DeNu5J-kOpbjzOrZHZkgSJuh4qp4TqFzuQH11wPtZ-RNxGZwrjAi2PvGsVPEbNFhpAJUAyYaTZwXwuC9sdqVoiobGLH8_xdV78KDdoLFHCnsc/s320/images%20-%202025-05-17T110620.086.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Smash Karts</div>
+    </div>  
+  </td>
+  
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Solitaire Classic.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR64itgV8bYQOLVgMsRGZWgrrhxHcG7YXHFAZg8uZhJGAQ49ki3iZ8n0gs&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Solitaire Classic</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Sonic Clash.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJAZtoxMFmwraKnGCj-KNoSpSafkPyjjkpJd2PYoi5oj76eGTx-pzQpeA&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Sonic Clash</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Space Waves.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbiiS28-tgOlfQ-LeR6CHFEdp5r58X1mIzmMlMb7sQbYoY2Xl9WtrDrzk&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Space Waves</div>
+    </div>  
+  </td>
+  
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Spotti.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQayWmn0zU1aadGnYDp-tG4PdUbZi9KNqeWARur_vlotkOvYlI6t9MpuKxV&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Spotti: Find the Differences 🕹️ Mainkan di CrazyGames</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Squid Games 1.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4eb6wZi3nsOgJ0pQPr9pSbMMH6UZdabC7_BEMzmtLTClGIvi7vOCrHLo-gKQrS5fKDmzDlgdgxfBq2WnIxi-F-pr9z3DVx6OazhkgkvUQF6xxzP_p88DNL0PBSyf6N3WX1nS2pWP0k5J_cJd3L_3MXqqDibJf7VYOEVNDYWhZUvbvfaevUF8CeXZn9lk/s320/images%20-%202025-05-17T065826.457.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Squid Game</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Squid Games 1.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVjC0lxnoOGFaNYfbgC-bmPkL4l6-EbKvJUxBMtvAqkobAclybeJ4X2P0&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Squid Games</div>
+    </div>  
+  </td>
+  
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Stair Race 3d.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDc2wBs5c2saWzVJDlLTPJo3ym5oXmWxvzy082mma7W7Ftcq6OznQHSB2_&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Stair Race 3D</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Stick Freak.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwtN7k18B7ekpurhuOHciZosjOOC963nN3ApVwXtfcC4k72zhR6Q4QBHlJAjU1Os5hEkJImguLbxjW_Nuic7CY6KA9RcCOIzGIzbMOfysDHmWMvOgkz8SQ7heRDsnPEtXptjqC0b9Ie3eO-lBucLueKyo40eKwGFtf3_LwxbLCxwlnS3pNnK1SFoCtArE/s320/stick-freak.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Stick Freak</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Stickman Climb.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9OHycDRRJWN9ZWyLFPKPFb2pFNSLuss4QMuLFt6YTUkz9pre2PbKFPMg&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Stickman Climb</div>
+    </div>  
+  </td>
+  
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Stickman Hook.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTO93X8oeMqygIYuRjoDOJGZbrzeAqIdvtNcpzAlkPJLvZUcCyCBtFKXM&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Stickman Hook</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Street Gun Fight.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipQabrN-BixkzJpIWuyeTP_CCVcJ_ocOldN2Sny7CqvK9gsfQ2Lw70WkGIqxqTYD2gI-_vK0TYjodaFNPikDUcASSh2mFFHTHYzomj-mD2fYZu_6Fa9vsVjqscE5Kv9X9xrbqr17FACCbKRSqc-_DMbuTNfEk6O6HqefdJn_N6dG_3K7gjoBZYnKcDW64/s320/Picsart_25-05-23_01-11-45-615.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Street Gun Fight</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Aloha Hawaii.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6_0OoXiltyzVyOPUtfhHEt2kFMVKz9Zpa9CigN0jxbi9occyERsrc-Z_3&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Aloha Hawaii</div>
+    </div>  
+  </td>
+  
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Osaka.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUryUti53GjmJgTIOGTrYVVZpWDvjs3O8wJsiZVEhIkb6lybHPOKByn_42&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Osaka</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Mumbai Holi.html">
+      <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQbCElGh8caj9ojbNH_Y5WZXY8AtqNegEK7Q-LqJut2LZ5dq9Cs" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Mumbai Holi</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Haunted Hood.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw7Zg4gE_Ob0GRRuSKjyaQ0JX3yRKN-8xT4SIkec6S_kOwlAlQ7gnSpUg&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Haunted Hood</div>
+    </div>  
+  </td>
+  
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Rio Carnival.html">
+      <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSYapqTN0N_TQfu02rsjEufjFzwVUas5qiyM_eN_dhFrZC4dMet" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Rio Carnival</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Nort Pole.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoF7g99jTqqRH2F8u3FPMhMGgayMV75edL1xPqozcP0d3qGpYfhnstHZIu&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Nort Pole</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Paris Summer Games.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk_8MxzAA7OBT7YCb_Y_czCuB4mPscO9pYhXVKxN1_UGKm4NMAKWQamfY&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Paris Summer Games</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Vegas Queens.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0a3su1f8ZfrLpaJyHAkCWXgTFWhZm-ZIEiTokprJqMo67F19uWsxLnKA&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Vegas Queens</div>
+    </div>  
+  </td>
+  
+  
+
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Vancouver.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirHfjGkzMv3ClgLJOvoGK60fZcj0AT_zv0CFNATLtZUajmZDXolrEpQI5yKKTjdfGPqUj8s0SWR-yOFsuF4nLPcY_mKKpUtSzoU4WY_cd8DcG4CEXE3-XDIklMLFv-vHjpvBRZz9JHLbWMOTyBb4mVbaYLuD6PxUdlknHRa9XKl-zUR-Ao9-gYkrHDfBU/s320/Picsart_25-05-23_10-31-31-660.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Vancouver</div>
+    </div>  
+  </td>
+
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Istanbul.html">
+      <img src="https://img.gamesgo.net/storage/images/games/subway-surfers-world-tour-istanbul/screenshot-4jpg.jpg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Istanbul</div>
+    </div>  
+  </td>
+  
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Years Of The Snake.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgINQmrAXHhCwJO4nDOca8cxFyzhb_uhJDluD1biKYp9KXn1hIKZINLhwnskGORET33rrumKhuTgJ6Juit-mZHKiC7o44LDyfgaXh3MympeShdjkClozbTGZxBMMnDXrpwJMTVr7C7hXap4w013ElReAsuezB5iTf6faz1SQla5JnxPGcQFX1mGKlx7iL8/s320/Picsart_25-05-23_10-26-09-790.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Years Of The Snake</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways New York 2.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLS0w5gNCqgSUoTkj62Ke6kAA6W12f1sl3w3PLO-3cJlZqR_fkXs-9Gp-x&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers New York</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Winter Wonderland.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNzDv9HfnZygt5KNGuUJRO88T9vSytktui_hDvq6vJrs4vNszJqiPxe8en&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Winter Wonderland</div>
+    </div>  
+  </td>
+  
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/     .html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_KNf_gV0GXnBld0F9HGr7ryeUiQQkH542Vbl0Wn5KfMZO2DYUitJunXMZ&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Seoul</div>
+    </div>  
+  </td>
+ 
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Hollywood.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT39GwPcR73LxeaZEOdRdLfLklnmX_7wOLsRWVizaOnfNk85GQih-h1USc&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Hollywood</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Love Oddysy.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyipsiVAipzS3DKB529Gp-ZVU-azlS5xvh6NSP6ctY_G6A6MPl2Dyaoncs&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Love Oddysy</div>
+    </div>  
+  </td>
+  
+  
+  
+  
+
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Tokyo.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2dOBbVbN8VRAFSDUFjt7zbDbhMTIIkchRUixc6NavTq_ennLbfSnJjxg&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Tokyo</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Sydney.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEzkvIGGHdmQyKzBboPhH0V4VcB9kINLSs2uLNYBni8SBpQ4B158157__RPB_cVrNNDvmf3lCSAuxg6e-TDZDRBG5nzG0JE74MiVHkWtQtMoqVGa17kx-2TqRwInkWt1u72118xlHg_JJ0jt9dY-O4ZoViEi2cmrAX8251K64961hJChWWqbCdqGheOAI/s320/Picsart_25-05-23_11-23-13-913.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Sydney</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Iceland 2.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0mhwpRPKKz48VqJYIjRRIGCsJmT9W4FdMoE3CLwhq69kGf6jzz3bCh2Qk4vL39y-FV1EATt6NRdvgKNen7fQRwyK7ZFY6gok2yw1_ar8L7W3o4FdzZV4FVOP-EHqmiEu5_GcPeN-mGQnv375_jH8PtSGtiW5bht3S2jgkUeawPMWLlkvSTITpH4gnraw/s320/Picsart_25-05-23_11-58-38-916.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Iceland</div>
+    </div>  
+  </td>
+  
+   
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Shenzhen Showdown.html">
+      <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQbdomphyBBfImr5vDBx4RLlvFjd-kOaXaQL2mB2_KbuNZk2NRa" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Shenzhen Showdown</div>
+    </div>  
+  </td>
+  
+  
+
+      
+ 
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Edinburgh.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiN_kukICQbHu8IJ8zKJhyXxLvRlTpKBp0VpyQ_5W47miTSvecBdK1a2g&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Edinburgh</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Buenos Aires 2.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSigc9pFU9gB6G_DTNaNoXjhMnEeZYo0GNTK7frkyykwztJHpJ_xkDXhcL9&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Buenos Aires</div>
+    </div>  
+  </td>
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subway San Fransisco.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMa7feH5ePlYwL-JqLTC9EyHyS7e4mIudwPtly3HXgyLmlsk14Xn4PvQM&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers San Fransisco</div>
+    </div>  
+  </td>
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Easter Ireland .html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoqKYgapgkJuvHqFRVkayV0Hur0DaC6F_9h_-F_FePJiuPRs9bAIDMJw8&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Easter Ireland</div>
+    </div>  
+  </td>
+ 
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Fantasy Fest.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU996y27AedRql5sYghT1IerDWacd590LigX1dtCRQPhMxLvj_k5k7Ym7Y&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Fantasy Fest</div>
+    </div>  
+  </td>
+  
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Chicago.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjx1YS9o4lOG26vydBSnaMAxzRosBBnG-gNQPx1TvVRRitTQsiuT-w2Yo&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Chicago</div>
+    </div>  
+  </td>
+  
+
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Subways Underwater.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScRuZX7OyDAwb0b19rI1UgfHp2FvFJnUdlFhaDO1KQrCuMc9w3RPCm2FU&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Subway Surfers Underwater</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Super Pixel.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihL67UxcaVzszo5hMPRAPdahg4ZPckLnYtEzmh5d9DZ2Lcl1XOKBfryk1sHjba_CIgcz_zdtqC7VzqvCGVTaRBFB5NZiy5tehqAnqUUVZv2KsqQPP1G5gP3b5VLo6_1-PQbU12q14EIfjsJp_N6fBdojGdRs1syNnX0liLXaCxy4ohBf4FsFPFgcgBwzY/s320/Picsart_25-05-23_15-43-08-540.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Super Pixel</div>
+    </div>  
+  </td>
+  
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Super Tunel.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYbt7CWon6lk-sTMVr6FIL1I-c_8yijftraTxzxx3LQLiYSwkCzPtk3nQ&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Super Tunel</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Sushi Roll.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_uZ-TJYZn8kwa0uAZJStot31hmzBdFz6f22O5F51T--JV20C3mntXFo27&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Sushi Roll</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Sweet Run.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaKNO2oBwnYx0J0F540gQgVPY6A1lJJyoAZvnSJbxNOtC2tNbBT9PBNDU&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Sweet Run</div>
+    </div>  
+  </td>
+  
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/     .html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinU8FVE9LAYj90Y8p8u3XjOW9dZe5ftvytjNmHzW3tVyD7btD5_FJz8WUYd6LN7zNTIqeDT67_jitBSiNjsu79BFSYuAofmAMt6HXg7L3xVtikRewLSpHdeirDB7yQEp-pXLl1dWgHYIo3gXHiiGHaK028ykku-SMP4Uae8JPbEt1QbQGQ8_eXFU3t1PQ/s320/5782201e68674f4a631137b5fbc34a37.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Swingers</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Table Tenis.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw_V7aqJK0kMhvRRCeU0FH9voDPfyw_jfpM909YOM3AZ7RDXNvu-N7dDU&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Table Tenis</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Tail Swing.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwxKQbrsYVIEI6oapzFflaW26_B8JL46iUpVWn0UPmSFvIBKnXOO_mkh98&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Tail Swing</div>
+    </div>  
+  </td>
+  
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Tap Trick.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWMWRzMBzXtjmhCdj6EMavASHhwUEsbm6ZUyIP68bXEk2lJMBdArSYf-4C&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Tap Trick</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Temple Run 2 Frozen Shadow.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTrXFnr2HqeEjWUI-OysPSEueFFJ1B6uDQZIgwLLXYC30Vn_zENEwAoWk&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Temple Run 2 Frozen Shadow</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Temple Run 2 Holi Festival.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJaHHTR8Vyeq03ycth2eKMgjVDpYZg2e5gNRT6d59z_Qe8lcZMQNeNc8Ip&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Temple Run 2 Holi Festival</div>
+    </div>  
+  </td>
+  
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Temple Run 2 Jungle Fall.html">
+      <img src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=1200,height=1200,fit=cover,f=png/56e55c0e9fe943d447f02821cd6d8c26.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Temple Run 2 Jungle Fall</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Temple Run 2 Spooky Summit.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoEBsUv-lZO1gm4-TnB5OC1cugi8JADmCGlEazOwoocL8pcCrButXJt6I&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Temple Run 2 Spooky Summit</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Thumb Fighter.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJYbfc2XFQ6DXKq5Rz6a96jK1FNd1shfYOt-v8706rub-tHvIIvhYaIRw7M2WpRqzfvhhqlmKIldxUS2NZiBavAFvONv8TahJKUrVGbOYs8BL9K4mHaS9J1wImY8J6k6-jXHEJ3jZe3E1c9oy0GF52rxBvsBp9gZ6exiZmXCGpUm3eeVaO0tP61sXGub8/s320/unnamed.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Thumb Fighter</div>
+    </div>  
+  </td>
+  
+  
+      <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Tiny Fishing.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4jOvR7e0yLseSqZm0Wgn9liMy5EY5Gsh_m4wFwaMCYn2ekmmEGCxq1Jk&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Tiny Fishing</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Tower Twist.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyvdjI_If8Koex8qLDJjfYx7ACMdPdvm0przFHXK7Uscs8IztE1EbVToI&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Tower Twist</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="https://joyheart.myfunmax.com/TrickyRace/game.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqRi0ZSQtJvIa7q1BwYEzFE86OeVJAbFfpz4jsOaid8v1wnB1sszHUb1g&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Tricky Race</div>
+    </div>  
+  </td>
+  
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Uno 4.html">
+      <img src="https://a.silvergames.com/j/b/four-colors.jpg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Uno 4</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Uno Online 2.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2aIr4LZ0itDpgVYjYqwZSUQZfZhb-c24LuLiUqwaycan-q1WoVyYM9iq2&s=10" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Uno Online</div>
+    </div>  
+  </td>
+  
+  
+
+  
+    
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/wow.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvK_kmwEQ4DPYiREuoj_NFJICNbrQAEaRgV8KQrjPk9lFM0UCtrjkci26UezcnGWFiJHFWZ6qnoIuiLYIfEYufneLb7Sj0ulHtp6ruDyiQGEoR4GKtHK39I9cnNB5phfDpd_wfeemtg-KNvXQ8xg5Qt5UNYEU36j09ZnnFPKSf70ADEvl7DQPlNjynmYY/s320/images%20-%202025-05-17T063859.710.jpeg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Word Of Wonders</div>
+    </div>  
+  </td>
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Yeah Bunny.html">
+      <img src="https://play-lh.googleusercontent.com/FCsdpxfRknHuOPDyuVGc--FxdCFlr_dPS8tI3qJnEXSgJTBg40eNTK7Aq48ypnMXPg" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Yeah Bunny</div>
+    </div>  
+  </td>
+  
+  
+    <td>              
+    <div id="panggil">    
+   <div class="cardxu" data-href="Game Online/Yeah Bunny 2.html">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFRn4Qfb5pSs7vJ_x6PsYLJoUhTc5Jt7ChYyfP-FXseoJQQ1PF9PJSyHVwQUsPXvn_c2wOm0zSmi84NF61kDTwM2z0LjOri3n3lqGLgItSKbXozGzcSL7PjpgIL8nSK5Kfpq1Thnus-DAMV4X2vx8wtsLqRZ_mlFOO6ssU7BnsS_VNixrK9ZdTDHbwejI/s320/unnamed%20%281%29.png" class="cardxu-image">      
+  </div>
+ <div class="pendeks">Yeah Bunny 2</div>
+    </div>  
+  </td>
+  
+  
+  
+</main>                       
+                       
+                       
+                       
+
+
+
+  <!-- main content ends  -->
+
+
+  <footer class="iq-bg-dark">
+    <div class="footer-top">
+      <div class="container-fluid">
+        <div class="row footer-standard">
+          <div class="col-lg-5">
+            <div class="widget text-left">
+
+            <div class="widget text-left">
+              <div class="textwidget">
+                <p id="readme"><small>Di Gemshort kamu biasa memainkan berbagai macam game secara gratis. banyak mini games seru dan penuh tantangan yang dapat mengisi waktu luang mu. Selesaikan misi dan cetak skor terbaikmu!<br></small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+            <h6 class="footer-link-title">
+              Follow Us:
+            </h6>
+            <ul class="info-share">
+              <li>
+                <a href="http://redpack.wuaze.com">
+                  <i>
+                  <fa class="fa fa-google"></fa>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@Redpack_id">
+                  <i>
+                  <fa class="fa fa-youtube"></fa>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/redpack.id?igsh=cWM3a3Z5a2lmanYy">
+                  <i>
+                  <fa class="fa fa-instagram"></fa>
+                </a>
+              </li>
+
+
+            </ul>
+          </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+    </div>
+    
+  
+    <div class="popup" id="popup">
+    <div class="popup__content">
+      <img class="pop__image" src="Tidak Ada Jaringan/asset img/3.gif">
+    </div>
+  </div>
+
+  <script>
+function updateNetworkStatus() {
+        const popup = document.getElementById("popup");
+
+        if (navigator.onLine) {
+            popup.classList.remove("popup--show");
+            document.body.style.overflow = "auto"; 
+            document.documentElement.style.overflow = "auto"; // Memungkinkan scroll kembali
+        } else {
+            popup.classList.add("popup--show");
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden"; // Memastikan seluruh halaman tidak bisa di-scroll
+        }
+    }
+
+    window.addEventListener("online", updateNetworkStatus);
+    window.addEventListener("offline", updateNetworkStatus);
+
+    // Pengecekan awal saat halaman dimuat
+    updateNetworkStatus();
+  </script>
+      
+  
+  
+  
+    
+      <!-- Tombol Kembali ke Atas -->
+  <button id="scrollToTopBtn" title="Kembali ke Atas" >∆</button>
+  
+  <script src="kembali.js"></script>
+  <!-- js files  -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/select2.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/slick-animation.min.js"></script>
+  <script src="main.js"></script>
+    
+<!--=============== SWIPER JS ===============-->
+      <script src="sliders.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="slider.js"></script>
+
+<script src="cari.js"></script>
+    
+
+<script>
+  function playVideo(card) {
+    const video = card.querySelector("video");
+    const img = card.querySelector("img");
+    img.style.opacity = "0"; // Sembunyikan gambar
+    video.style.opacity = "1"; // Tampilkan video
+    video.play(); // Putar video
+  }
+
+  function pauseVideo(card) {
+    const video = card.querySelector("video");
+    const img = card.querySelector("img");
+    video.style.opacity = "0"; // Sembunyikan video
+    img.style.opacity = "1"; // Tampilkan gambar
+    video.pause(); // Hentikan video
+    video.currentTime = 0; // Reset video
+  }
+
+   
+</script>
+                       
+                       
+    <script>
+        document.querySelectorAll('.cardxu').forEach(cardxu => {
+            cardxu.addEventListener('click', (event) => {
+                event.stopPropagation();
+                cardxu.classList.add('clicked');
+
+                const href = cardxu.getAttribute('data-href');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 2000);
+            });
+        });
+
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.cardxu').forEach(cardxu => {
+                cardxu.classList.remove('clicked');
+            });
+        });
+    </script>
+
+    
+</body>
+
+</html>

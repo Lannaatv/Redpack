@@ -1,0 +1,764 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <meta name="theme-color" content="#000000">
+  <title>Donasi</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- i will provide this in description  -->
+  <link rel="stylesheet" href="css/slick.css" />
+  <link rel="stylesheet" href="css/slick-theme.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/select2.min.css" />
+  <link rel="stylesheet" href="css/select2-bootstrap4.min.css" />
+
+   <link rel="stylesheet" href="button.css" />
+  <link rel="stylesheet" href="css/slick-animation.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cssx/style wrapper.css" />
+  <link rel="icon" type="image/jpg" href="images/parallax/icon.png">
+    
+<!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="sliders.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="slider.css">
+
+      <style>
+    
+ 
+
+ 
+  
+ 
+.teks {
+            width: 370px;
+            font-size: 12px;
+  margin: 0 0 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+            
+            
+             
+            
+       .containerr img {
+            width: 100%;
+            display: block;
+                  margin-top: 45px; 
+                   height: 220px;
+
+        }
+        .image-container img {
+            cursor: pointer;
+            max-width: 150px;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+            
+            
+          .iframe-overlay   .containerr img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 98%;
+            pointer-events: none;
+            background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.11144), transparent);
+        }
+        iframe {
+            width: 100%;
+            height: 300px; /* Sesuaikan dengan kebutuhan Anda */
+        }
+            
+.hidden {
+  display: none;
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+            
+#popupu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#popupe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+            
+.popup-content {
+  position: absolute;
+  display: grid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            gap: 2px;
+            height: 250px;
+            color: black;
+
+            overflow-y: auto; /* Tambahkan scrolling vertikal */
+}
+            
+  .detail-button {
+    width: 150px;
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: red;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .detail-button:hover {
+    background-color: black;
+              color: white;
+  }
+            
+            
+.black{
+            color: black;
+}
+ 
+            .vid{
+            width: 100%;
+             height: 100%;     
+            }
+.butt{
+            margin-top: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+padding-right: 50px;
+padding-left: 50px;
+            background: red;
+            border: 0px;
+            border-radius: 10px;
+}
+            
+ .but{
+            display: flex; /* Mengaktifkan flexbox */
+             justify-content: center; /* Menyelaraskan secara horizontal */
+
+ }           
+            
+            
+@media only screen and (min-width: 600px) {
+            
+       .containerr img {
+            width: 100%;
+            display: block;
+                  margin-top: 45px; 
+                   height: 100%;
+                   object-fit: cover;
+        }
+            
+        .image-container img {
+            position: relative;
+            cursor: pointer;
+            max-width: 170px;
+                    height: 90px;
+            margin: 10px;
+            transition: transform 0.3s;
+            background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.11144), transparent);
+
+        }
+ .moved{
+    position: relative;
+             padding-top: 70px;
+    margin-top: 40px;
+    display: block;
+background-image: linear-gradient(to right, black 10%, rgba(0, 0, 0, 0.11144) 50%, transparent 80%);
+height: 100%;
+ }
+            
+.butt{
+            padding-top: 10px;
+            padding-bottom: 10px;
+width: 100%;
+            background: red;
+            border: 0px;
+            border-radius: 10px;
+             
+}
+                        .vid{
+            width: 100%;
+             height: 100%; 
+             object-fit: cover;    
+            }
+    .parent{
+            position: absolute;
+            top: 80px;
+      width: 100%;
+        width: 500px;
+      gap: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 20px);
+      justify-content: center;
+
+    }
+              .cards{
+    background: transparant;
+    border-radius: 12px;
+    max-width: 520px;
+  }
+  .cardx {
+    position: relative;
+    width: 10%;
+    height: 170px;
+    overflow: hidden;
+    margin-bottom: 10px;
+            scroll-snap-align: center; /* Efek lengket */
+
+  }
+}        
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+            
+            .containerr img {
+                 width: 100%;
+                 display: block;
+                       margin-top: 45px; 
+                        height: 100%;
+                        object-fit: cover;
+             }
+                 
+             .image-container img {
+                 position: relative;
+                 cursor: pointer;
+                 max-width: 170px;
+                         height: 90px;
+                 margin: 10px;
+                 transition: transform 0.3s;
+                 background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.11144), transparent);
+     
+             }
+      .moved{
+         position: relative;
+                  padding-top: 90px;
+         margin-top: 40px;
+         display: block;
+     background-image: linear-gradient(to right, black 25%, rgba(0, 0, 0, 0.11144) 50%, transparent 80%);
+     height: 100%;
+      }
+                 
+     .butt{
+                 padding-top: 10px;
+                 padding-bottom: 10px;
+     width: 100%;
+                 background: red;
+                 border: 0px;
+                 border-radius: 10px;
+                  
+     }
+                             .vid{
+                 width: 89%;
+                  height: 100%; 
+                  object-fit: cover;    
+                                         margin-left: 90px;
+                 }
+     
+     
+     }           
+
+     @media only screen and (min-width: 992px) {
+            
+            .containerr img {
+                 width: 100%;
+                 display: block;
+                       margin-top: 45px; 
+                        height: 100%;
+                        object-fit: cover;
+             }
+                 
+             .image-container img {
+                 position: relative;
+                 cursor: pointer;
+                 max-width: 170px;
+                         height: 90px;
+                 margin: 10px;
+                 transition: transform 0.3s;
+                 background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.11144), transparent);
+     
+             }
+      .moved{
+         position: relative;
+                  padding-top: 130px;
+         margin-top: 40px;
+         display: block;
+     background-image: linear-gradient(to right, black 10%, rgba(0, 0, 0, 0.11144) 50%, transparent 80%);
+     height: 100%;
+      }
+                 
+     .butt{
+                 padding-top: 10px;
+                 padding-bottom: 10px;
+     width: 100%;
+                 background: red;
+                 border: 0px;
+                 border-radius: 10px;
+                  
+     }
+                             .vid{
+                 width: 100%;
+                  height: 100%; 
+                  object-fit: cover;    
+                 }
+                 
+                 .teks {
+            width: 370px;
+            font-size: 12px;
+  margin: 0 0 0 0;
+  margin-left: -80px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+     
+     }        
+     
+
+     @media only screen and (min-width: 1200px) {
+            
+            .containerr img {
+                 width: 100%;
+                 display: block;
+                       margin-top: 45px; 
+                        height: 100%;
+     object-fit: cover;
+             }
+                 
+             .image-container img {
+                 position: relative;
+                 cursor: pointer;
+                 max-width: 250px;
+                         height: 150px;
+                 margin: 10px;
+                 transition: transform 0.3s;
+                 background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.11144), transparent);
+     
+             }
+      .moved{
+         position: relative;
+                  padding-top: 270px;
+         margin-top: 0px;
+         display: block;
+     background-image: linear-gradient(to right, black 10%, rgba(0, 0, 0, 0.11144) 50%, transparent 80%);
+     height: 100%;
+      }
+                 
+     .butt{
+                 padding-top: 10px;
+                 padding-bottom: 10px;
+     width: 100%;
+                 background: red;
+                 border: 0px;
+                 border-radius: 10px;
+                  
+     }
+      .vid{
+         width: 100%;
+         height: 100%;  
+         object-fit: cover;   
+    }
+
+  .footere-topo{
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+.teks {
+            width: 370px;
+            font-size: 12px;
+  margin: 0 0 0 0;
+  margin-left: -80px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.colorsd {
+ 
+  padding-left: 10px;
+  font-size: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+} 
+     }        
+
+            
+.donate .donasi img{
+            
+           width: 100vw;
+            height: 100vh;
+}
+            
+.donate .donasi img{
+            width: 100%;
+}
+            
+.donasi .content{
+
+}
+
+
+              .cardsa{
+    background: transparant;
+    border-radius: 12px;
+    max-width: 100%;
+  }
+
+  .cardxa {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    margin-bottom: 10px;
+            scroll-snap-align: center; /* Efek lengket */
+
+  }
+            
+            
+.cardxxxa-info {
+    margin-top: 10px; /* Jarak antara card dan informasi */
+    padding-bottom: 10px;
+            padding-left: -100px;
+            padding-right: -100px;
+    display: flex; /* Mengaktifkan flexbox */
+    justify-content: center; /* Menyelaraskan item di tengah secara horizontal */
+    align-items: center; /* Menyelaraskan item di tengah secara vertikal */
+    gap: 13px; /* Jarak antara elemen */
+  
+  }
+            
+.cardxxxa-info h3 {
+    font-size: 18px;
+    color: black;
+    margin: 0; /* Hilangkan margin default */
+  }
+            
+            
+            
+            .pendeksa {
+    width: 210px; /* Tentukan lebar elemen */
+    white-space: nowrap; /* Jangan pindahkan teks ke baris baru */
+    overflow: hidden; /* Sembunyikan teks yang melampaui batas elemen */
+    text-overflow: ellipsis; /* Tambahkan elipsis (...) */
+    border: 0px solid #ccc; /* Opsional, untuk melihat batas elemen */
+}
+            
+              .detail-button {
+    padding: 8px 15px;
+                          padding-left: 38px;
+    font-size: 14px;
+    color: #fff;
+    background-color: red;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .detail-button:hover {
+    background-color: black;
+              color: white;
+  }
+            
+    .parents{
+            position: absolute;
+            top: 80px;
+      width: 100%;
+      gap: 10px;
+        display: grid;
+grid-template-columns: repeat(auto-fit, 250px);
+                justify-content: center;
+
+    }
+            .salin{
+                        background: grey;
+                        color: white;
+                        border-radius: 10px;
+                        display: grid;
+                        justify-content: center;
+                        padding-top: 8px;
+            }
+            
+  </style>
+  
+</head>
+
+<body>
+
+<div class="donate">
+<div class="donasi">
+<img src="https://cdnb.artstation.com/p/assets/images/images/066/149/065/original/killer-rabbit-media-chinese-alleyway-export.gif?1692171513"> 
+
+                </div>
+                </div>
+
+
+    <main class="parents">
+<div class="cardsa" align=>
+<div class="cardxa" onclick="stopVideo(this)" onmouseenter="playVideo(this)" onmouseleave="pauseVideo(this)">
+
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3oTy6WZR2r82cHfYSrSlyq6Vrp-2xNnRqt5NP8m3LRhh9rfOtMk6J0SM&s=10" alt="Gambar Thumbnail" width="100%" height="100%">
+</div>
+
+<!-- Elemen baru untuk judul dan tombol -->
+<div class="cardxxxa-info">
+  <h3 class="pendeksa"> </h3>
+  <a id="openPopupe" class="detail-button">OVO</a>
+</div>
+</div>
+            
+            
+            
+            
+<div class="cardsa" align=>
+<div class="cardxa" onclick="stopVideo(this)" onmouseenter="playVideo(this)" onmouseleave="pauseVideo(this)">
+
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP8Y1GlWQ4aPh1hNiAYSZCzqAUSGd1oXrI1a8Nm8piyvxRsAwdrNMXaWGl&s=10" alt="Gambar Thumbnail" width="100%" height="100%">
+</div>
+
+<!-- Elemen baru untuk judul dan tombol -->
+<div class="cardxxxa-info">
+  <h3 class="pendeksa"> </h3>
+  <a id="openPopupu" class="detail-button">DANA</a>
+</div>
+</div>
+            
+            
+            
+<div class="cardsa" align=>
+<div class="cardxa" onclick="stopVideo(this)" onmouseenter="playVideo(this)" onmouseleave="pauseVideo(this)">
+
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlN7uKxiFgS2jCQHOsbNmglshfahVOzHPOQuMWQD8fv_Whv4A1kE-MtNQT&s=10" alt="Gambar Thumbnail" width="100%" height="100%">
+</div>
+
+<!-- Elemen baru untuk judul dan tombol -->
+<div class="cardxxxa-info">
+  <h3 class="pendeksa">   </h3>
+  <a  id="openPopup" class="detail-button">GOPAY</a>
+</div>
+</div>
+            
+            
+<div id="popup" class="hidden">
+  <div class="popup-content">
+            <p>Kirim Ke GOPAY: <br>0895423519133</p>
+              <a class="salin" onclick="copyToClipboard()">salin</a>
+</div>
+</div>
+                
+                
+<div id="popupu" class="hidden">
+  <div class="popup-content">
+            <p>Kirim Ke DANA: <br>0895423519133</p>
+              <a class="salin" onclick="copyToClipboard()">salin</a>
+
+</div>
+</div>
+            
+                        
+<div id="popupe" class="hidden">
+  <div class="popup-content">
+            <p>Kirim Ke OVO: <br>Belum Tersedia</p>
+              <a class="salin" >salin</a>
+
+  </div>
+</div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+    </main>
+            
+
+
+  <!-- js files  -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/select2.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/slick-animation.min.js"></script>
+
+  <script src="main.js"></script>
+    
+<!--=============== SWIPER JS ===============-->
+      <script src="sliders.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="slider.js"></script>
+
+
+    <script>
+function ubahKeGambar(gambarSrc) {
+            // Temukan elemen container
+            const container = document.querySelector('.containerr');
+            
+            // Hapus elemen video atau gambar yang ada
+            container.innerHTML = '';
+
+            // Tambahkan elemen gambar baru
+            const img = document.createElement('img');
+            img.src = gambarSrc;
+            img.alt = 'Gambar yang Dipilih';
+            container.appendChild(img);
+            
+            // Tambahkan elemen overlay ke container
+            const overlay = document.createElement('div');
+            overlay.className = 'iframe-overlay';
+            container.appendChild(overlay);
+        }
+        
+    </script>
+
+<script>
+function toggleTeks() {
+  const teks = document.getElementById("teks");
+  const isPendek = teks.dataset.expanded === "false";
+
+  if (isPendek) {
+    teks.innerHTML = `
+      Minimum:<br>
+      • Requires a 64-bit processor and operating system<br>
+      • OS: Windows 10 (64 bit)<br>
+      • Processor: AMD Ryzen 3 1200 / Intel Core i5-7500<br>
+      • Memory: 8 GB RAM<br>
+      • Graphics: AMD Radeon RX 560 with 4GB VRAM / NVIDIA GeForce GTX 1050 Ti with 4GB VRAM<br>
+      • DirectX: Version 12<br>
+      • Network: Broadband Internet connection<br>
+      Additional Notes: Estimated performance (when set to Prioritize Performance): 1080p/45fps.<br>
+      ・Framerate might drop in graphics-intensive scenes.<br>
+      ・AMD Radeon RX 6700 XT or NVIDIA GeForce RTX 2060 required to support ray tracing.<br><br>
+      Recommended:<br>
+      • Requires a 64-bit processor and operating system<br>
+      • OS: Windows 10 (64 bit)/Windows 11 (64 bit)<br>
+      • Processor: AMD Ryzen 5 3600 / Intel Core i7 8700<br>
+      • Memory: 16 GB RAM<br>
+      • Graphics: AMD Radeon RX 5700 / NVIDIA GeForce GTX 1070<br>
+      • DirectX: Version 12<br>
+      • Network: Broadband Internet connection<br>
+      Additional Notes: Estimated performance: 1080p/60fps<br>
+      ・Framerate might drop in graphics-intensive scenes.<br>
+      ・AMD Radeon RX 6700 XT or NVIDIA GeForce RTX 2070 required to support ray tracing.<br><br>
+      <i>Klik lagi untuk menyembunyikan...</i>
+    `;
+    teks.dataset.expanded = "true";
+  } else {
+    teks.innerHTML = `
+    Minimum:<br>
+    • Requires a 64-bit processor and operating system<br>
+    • OS: Windows 10 (64 bit)<br>
+    • Processor: AMD Ryzen 3 1200 / Intel Core i5-7500<br>
+    • Memory: 8 GB RAM<br>
+    • Graphics: AMD Radeon RX 560 with 4GB VRAM / NVIDIA GeForce GTX 1050 Ti with 4GB VRAM<br>
+    • DirectX: Version 12<br>
+    • Network: Broadband Internet connection<br>
+      Additional Notes: Estimated performance (when set to Prioritize Performance): 1080p/45fps.<br>
+      ・Framerate might drop in graphics-intensive scenes.<br>
+      ・AMD Radeon RX 6700 XT or NVIDIA GeForce RTX 2060 required to support ray tracing.<br><br>
+    <i>tampilkan lebih banyak...</i>
+    `;
+    teks.dataset.expanded = "false";
+  }
+}
+</script>
+
+<script>
+document.getElementById("openPopup").addEventListener("click", function () {
+  document.getElementById("popup").classList.remove("hidden");
+});
+
+document.getElementById("popup").addEventListener("click", function (event) {
+  if (event.target.id === "popup") {
+    document.getElementById("popup").classList.add("hidden");
+  }
+});
+</script>
+            
+            
+<script>
+document.getElementById("openPopupu").addEventListener("click", function () {
+  document.getElementById("popupu").classList.remove("hidden");
+});
+
+document.getElementById("popupu").addEventListener("click", function (event) {
+  if (event.target.id === "popupu") {
+    document.getElementById("popupu").classList.add("hidden");
+  }
+});
+</script>
+            
+            
+<script>
+document.getElementById("openPopupe").addEventListener("click", function () {
+  document.getElementById("popupe").classList.remove("hidden");
+});
+
+document.getElementById("popupe").addEventListener("click", function (event) {
+  if (event.target.id === "popupe") {
+    document.getElementById("popupe").classList.add("hidden");
+  }
+});
+</script>
+
+
+    <script>
+        function copyToClipboard() {
+            const textToCopy = '0895423519133';
+            const tempInput = document.createElement('input');
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            alert('Tautan telah disalin ke clipboard!');
+        }
+    </script>
+
+
+
+</body>
+
+</html>

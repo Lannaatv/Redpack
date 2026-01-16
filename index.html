@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#000000">
+  <title>TernakGame</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Search Button */
+    .search-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .search-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: scale(1.1);
+    }
+
+    .search-button i {
+      color: white;
+      font-size: 20px;
+    }
+
+    /* Hero Background Section */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      min-height: 400px;
+      margin-bottom: 0;
+    }
+
+    .hero-bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      padding: 0 20px 60px;
+      max-width: 1400px;
+      margin: 0 auto;
+      top: -90px;
+    }
+
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 150px;
+      background: linear-gradient(to bottom, transparent, #141414);
+      pointer-events: none;
+    }
+
+    .hero-text h1 {
+      color: white;
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      color: #fff;
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+      max-width: 600px;
+    }
+
+    .parent {
+      padding: 40px 20px 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 3;
+    }
+
+    .category-header {
+      margin-bottom: 20px;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .category-title {
+      color: #e5e5e5;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      position: relative;
+      padding-left: 12px;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 260px;
+    }
+
+    .category-title::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 24px;
+      background: #e50914;
+      border-radius: 2px;
+    }
+
+    .see-all-btn {
+      background-color: transparent;
+      color: #e5e5e5;
+      padding: 6px 16px;
+      border: 1px solid #e5e5e5;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.3s;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    .see-all-btn:hover {
+      background-color: #e5e5e5;
+      color: #141414;
+    }
+
+    .card-wrapper {
+      margin-bottom: 50px;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .cards {
+      background: rgba(30, 30, 30, 0.8);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .cards:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    .cardx {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+    }
+
+    .cardx img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .cards:hover .cardx img {
+      transform: scale(1.1);
+    }
+
+    .card-content {
+      padding: 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: #f9f9f9;
+    }
+
+    .poster-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .game-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .game-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+      margin-top: 5px;
+      color: #fff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 150px;
+    }
+
+    .game-meta {
+      display: flex;
+      gap: 6px;
+      font-size: 11px;
+      color: #aaa;
+      flex-wrap: wrap;
+    }
+
+    .game-version {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 4px 10px;
+      border-radius: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 50px;
+    }
+  
+    .game-genre {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 4px 10px;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+
+    .detail-button {
+      padding: 8px 20px;
+      font-size: 13px;
+      color: #fff;
+      background-color: #e50914;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      align-self: flex-start;
+      margin-top: 12px;
+      font-weight: 500;
+      display: inline-block;
+    }
+
+    .detail-button:hover {
+      background-color: #f40612;
+      color: white;
+    }
+
+    @media (min-width: 500px) {
+      .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .category-title {
+        font-size: 1.6rem;
+      }
+
+      .hero-text h1 {
+        font-size: 3.5rem;
+      }
+    }
+
+    @media (orientation: landscape) and (max-width: 900px) and (max-height: 600px) {
+      .hero-section {
+        height: 50vh;
+        min-height: 300px;
+      }
+
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+      }
+
+      .hero-content {
+        padding-bottom: 40px;
+      }
+
+      .cardx {
+        aspect-ratio: 16/9;
+      }
+
+      .card-content {
+        padding: 14px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .poster-icon {
+        width: 55px;
+        height: 55px;
+        align-self: flex-start;
+      }
+
+      .game-info {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .game-title {
+        font-size: 14px;
+        margin-top: 2px;
+      }
+
+      .category-title {
+        font-size: 1.3rem;
+      }
+
+      .detail-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 8px;
+        align-self: stretch;
+        flex-basis: 100%;
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+
+      .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-section {
+        height: 75vh;
+      }
+
+      .hero-text h1 {
+        font-size: 4rem;
+      }
+
+      .hero-text p {
+        font-size: 1.3rem;
+      }
+
+      .cards-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .cardx {
+        aspect-ratio: 16/9;
+      }
+
+      .card-content {
+        padding: 16px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .poster-icon {
+        width: 70px;
+        height: 70px;
+        flex-shrink: 0;
+      }
+
+      .game-info {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .game-title {
+        font-size: 15px;
+      }
+
+      .category-title {
+        font-size: 1.8rem;
+      }
+
+      .detail-button {
+        width: 100%;
+        text-align: center;
+        padding: 10px 20px;
+        flex-basis: 100%;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .cards-container {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .category-title {
+        font-size: 2rem;
+      }
+    }
+
+    .loading,
+    .error {
+      text-align: center;
+      padding: 50px;
+      color: #f9f9f9;
+      font-size: 18px;
+    }
+
+    .error {
+      color: #ff4444;
+    }
+
+    .iframe-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: linear-gradient(
+        to top, 
+        rgba(0, 0, 0, 5.7) 0%,
+        rgba(0, 0, 0, 0.8) 30%,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0.2) 70%,
+        transparent 100%
+      );
+      pointer-events: none;
+    }
+
+      .iframe-overlays {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 1.7) 0%,
+        rgba(0, 0, 0, 0.5) 30%,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0.2) 70%,
+        transparent 100%
+      );
+      pointer-events: none;
+    }
+  
+    .up {
+      display: block;
+      width: 100%;
+      height: 90%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .move {
+      position: relative;
+      top: -150px;
+      display: block;
+    }
+.moves .hero-section {
+  position: relative;
+  z-index: 1; /* Lebih rendah dari .parents */
+}
+
+.parents {
+  position: relative; /* Pastikan sudah ada */
+  z-index: 999;
+  margin-top: -80px;
+  
+}
+
+/* ATAU alternatif yang lebih baik: */
+.moves {
+  position: relative;
+  top: -200px;
+  z-index: 1; /* Beri z-index lebih rendah */
+}
+  
+  .cardxu {
+
+  overflow: hidden;
+  position: relative; /* Penting agar pseudo-element '::before' berfungsi */
+  cursor: pointer;
+  border-radius: 12px;
+
+}
+
+.cardxu-image {
+      width: 100px;
+    height: 100px;
+    border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+  position: relative; /* Pastikan gambar tetap di bawah overlay */
+  z-index: -1; /* Tetap di bawah overlay */
+}
+
+.cardxu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Warna overlay gelap */
+  transition: opacity 0.3s ease-in-out;
+  z-index: 0; /* Pastikan overlay di atas gambar */
+  opacity: 0; /* Awalnya tidak terlihat */
+}
+
+.cardxu.clicked::before {
+  opacity: 1; /* Tampilkan overlay saat card diklik */
+}
+
+.cardxu.clicked .cardxu-image {
+  transform: scale(1.2); /* Efek zoom */
+}
+  .pendeks {
+    width: 100px; /* Tentukan lebar elemen */
+    white-space: nowrap; /* Jangan pindahkan teks ke baris baru */
+    overflow: hidden; /* Sembunyikan teks yang melampaui batas elemen */
+    text-overflow: ellipsis; /* Tambahkan elipsis (...) */
+    border: 0px solid #ccc; /* Opsional, untuk melihat batas elemen */
+  text-align: center;
+}
+  
+
+  
+    main{
+    display: grid;
+    max-width: 120000px;
+    margin: 0 auto;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 0.1fr));
+    margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+      z-index: 3;
+}
+  
+/* Horizontal Scroll Category Styles - Play Store Style */
+.horizontal-scroll-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: 0;
+  padding: 0 20px;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-page {
+  flex: 0 0 100%;
+  min-width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  padding-right: 0;
+}
+
+.scroll-page table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.horizontal-scroll .cards {
+  width: 100%;
+  background: black;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  min-height: 90px;
+}
+
+.horizontal-scroll .cards:hover {
+  background: rgba(40, 40, 40, 0.9);
+  transform: none;
+}
+
+.horizontal-scroll .cardx {
+  display: none;
+}
+
+.horizontal-scroll .card-content {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+.horizontal-scroll .poster-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.horizontal-scroll .game-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.horizontal-scroll .game-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  line-height: 1.3;
+}
+
+.horizontal-scroll .game-meta {
+  display: flex;
+  gap: 6px;
+  font-size: 10px;
+  color: #aaa;
+  flex-wrap: wrap;
+}
+
+.horizontal-scroll .game-version,
+.horizontal-scroll .game-genre {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.horizontal-scroll .detail-button {
+  display: none;
+}
+
+/* Scroll indicators */
+.scroll-indicators {
+  display: none !important;
+}
+
+.scroll-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.scroll-dot.active {
+  background: #e50914;
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .horizontal-scroll {
+    padding: 0 40px;
+  }
+  
+  .horizontal-scroll .poster-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .horizontal-scroll .game-title {
+    font-size: 15px;
+  }
+  
+  .horizontal-scroll .game-meta {
+    font-size: 11px;
+  }
+  
+  .horizontal-scroll .cards {
+    min-height: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .horizontal-scroll .poster-icon {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .horizontal-scroll .cards {
+    min-height: 110px;
+    padding: 15px;
+  }
+}
+  
+  .footer_section {
+  position: relative;
+  background-color: #a00000;
+  text-align: center;
+}
+
+.footer_section p {
+  color: white;
+  padding: 25px 0;
+  margin: 0;
+}
+
+.footer_section p a {
+  color: inherit;
+}
+  
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+  
+  <!-- Search Button -->
+  <a href="search.html" class="search-button">
+    <i class="fa fa-search"></i>
+  </a>
+  
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <img src="https://i.pinimg.com/originals/b1/fb/3e/b1fb3e315e5507fd367e68851eab4188.gif" class="up">
+    <div class="iframe-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Welcome to TernakGame</h1>
+        <p>Discover the best games and APK downloads</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="move">
+    <div class="parent">
+      <div id="loading" class="loading">Memuat data...</div>
+      <div id="error" class="error" style="display: none;">Terjadi kesalahan saat memuat data.</div>
+    </div>
+  </div>
+<div class="moves">
+    <div class="hero-section">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2HyyhOCOD_LR1z9TwVi2VM65ghcoic_3lDafohtYhloDFZiIA5hVyDm2Nlw49egJZY_lyupFfWaY3q6txsPlqmqo2qSCk_X4gZk-79ue0M5yMMqJr9CYnwZzGzLUh2ndW3XecVT51pSvn4fZX1hw0Lkp1lJXetkdkuGzguS_UaWzQJ472K6qYyG1qLI0/s3135/BeautyPlus-IMAGE-ENHANCER-1768304450831.png" class="up">
+    <div class="iframe-overlay"></div>
+    <div class="iframe-overlays"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Free to Play!</h1>
+        <p>Mainkan game gratis tanpa batas sekarang.</p>
+      </div>
+    </div>
+  </div>
+  
+  <main class="parents">
+  <div class="cardxu" data-href="Game Online/Thumb Fighter.html">
+      <img src="https://play-lh.googleusercontent.com/XNCckRCKW9VoGYAmK2o_zXJy6kiI5pNYPzJv7Gid5-cf4D-Q5cKroxLeb4TYpOrNu3f3" class="cardxu-image">         
+  </div>  
+  
+  <div class="cardxu" data-href="Game Online/doodle road.html">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoldB3HhN78lHxDPFsMsiKDAm17Fucxf8VLj1T0XtJebHQWZ3u-D6I-cE&s=10" class="cardxu-image">         
+  </div>
+  
+  <div class="cardxu" data-href="Game Online/Only Jump.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHtzeNr_fFdB1cPXTidSuawQxqUJI_22mzJ5gojKLmz8oFGsnApXVPx9k&s=10" class="cardxu-image">      
+  </div> 
+  
+  <div class="cardxu" data-href="Game Online/Level Devil.html">
+      <img src="https://leveldevil.vip/logo.png" class="cardxu-image">      
+  </div> 
+  
+  <div class="cardxu" data-href="Game Online/wow.html">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEFur6V0L6KPdWKrKD_WIIXyKJfZ7bLdn4ac7Qw_jFiqPhQL3TcXhnZF4&s=10" class="cardxu-image">      
+  </div> 
+  
+  <div class="cardxu" data-href="Game Online/Drift Boss.html">     
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7PE0kI1Xxt9BP1Zxjbl-4yQGELnMMrkN8ngoay6QqERYmuvZ-gFQI9MM&s=10" class="cardxu-image">      
+  </div>  
+  
+  <div class="cardxu" data-href="Game Online/Crossy Road.html">
+    <img src="https://m.media-amazon.com/images/I/51f2v3z0wbL.png" class="cardxu-image">      
+  </div> 
+  
+  <div class="cardxu" data-href="Game Online/Knifes Smash.html">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7jH9n90F3qo_Nt8u83mN3xV0sfHC3zJ8XMQ&usqp=CAU" class="cardxu-image">      
+  </div> 
+  
+  <div class="cardxu" data-href="Game Online/Save Pets.html">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXkd7_80VzKwLY_qo7iz8mPnCiG8ntF4Xa_Q&usqp=CAU" class="cardxu-image">      
+  </div> 
+  
+    <div class="cardxu" data-href="Game Online/Tiny Fishing.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4jOvR7e0yLseSqZm0Wgn9liMy5EY5Gsh_m4wFwaMCYn2ekmmEGCxq1Jk&s=10" class="cardxu-image">      
+  </div>
+        
+  <div class="cardxu" data-href="Game Online/Sling kong.html">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJkIYb7ES0SYggmgdCebPUpgqCc0zhD2gyososbeL8MG562YQCJtJ2Rlc&s=10" class="cardxu-image">      
+  </div>  
+  
+  <div class="cardxu" data-href="Game Online/Sausage Flip.html">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNXe9CIFBLtPAAFGteeUREOie2Ymu3szJvLP6ylxcmNt3cixiTG3IV6y2c&s=10" class="cardxu-image">      
+  </div> 
+  
+  <div class="cardxu" data-href="Game Online/Subways Osaka.html">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLtKQILqSTM21CB81c_ogrY0xhTqLdqtGXa4Fowg-H0k1aoD2x_YyMUHU5-VlXBtaP23cLRvJS1RrY4YIkYafHMSIY87LL0AfIJkDQzS3J-7QDSfMRirNOCFgj_w7WS-hEidCZrXo3RkzIlEOQXEH7oySJVeiAlUgfz9KWoT-GHAsD1SH97cJwqHY3DSg/s320/Picsart_25-05-17_07-04-57-943.png" class="cardxu-image">      
+  </div> 
+  
+  <div class="cardxu" data-href="Game Online/Cat Pizza.html">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMtTslbe-NQAjHFbcb6cT_3eLHdcgSPo1SMn5y5IDKAE3JQJa_eGDMZMdi&s=10" class="cardxu-image">      
+  </div> 
+  
+  <div class="cardxu" data-href="Home2.html">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_t8MPeRYCOgnO8ydePrk4Vi8UADRe-dOhFl0Y_kNyin2S9hQma4izgUkj&s=10" class="cardxu-image">      
+  </div> 
+  
+</main>
+  </div>
+    </div>
+  </div>
+    <section class="footer_section">
+    <div class="container">
+          <div class="iframe-overlays"></div>
+    <div class="iframe-overlays"></div>
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved ByRedpack
+
+      </p>
+    </div>
+  </section>
+
+  <!-- custom js -->
+  <script type="text/javascript" src="custom.js"></script>
+
+  <script>
+    async function loadCategoriesData() {
+      const loadingElement = document.getElementById('loading');
+      const errorElement = document.getElementById('error');
+      const parentElement = document.querySelector('.parent');
+      
+      try {
+        const response = await fetch('https://raw.githubusercontent.com/Lannaatv/Lowstream/refs/heads/main/apkvision.json');
+        
+        if (!response.ok) {
+          throw new Error('Gagal mengambil data');
+        }
+        
+        const data = await response.json();
+        loadingElement.style.display = 'none';
+        displayCategoriesData(data);
+        
+      } catch (error) {
+        console.error('Error:', error);
+        loadingElement.style.display = 'none';
+        errorElement.style.display = 'block';
+        errorElement.textContent = 'Terjadi kesalahan saat memuat data: ' + error.message;
+      }
+    }
+
+function displayCategoriesData(data) {
+  const parentElement = document.querySelector('.parent');
+  const loadingElement = document.getElementById('loading');
+  if (loadingElement) loadingElement.remove();
+  
+  data.categories.forEach((category, categoryIndex) => {
+    const categoryWrapper = document.createElement('div');
+    categoryWrapper.className = 'card-wrapper';
+    categoryWrapper.dataset.category = category.id;
+    
+    // Tambahkan class horizontal-scroll untuk kategori kedua (index 1)
+    const isHorizontalScroll = categoryIndex === 1;
+    
+    if (isHorizontalScroll) {
+      // Struktur khusus untuk horizontal scroll
+      categoryWrapper.innerHTML = `
+        <div class="category-header">
+          <h2 class="category-title">${category.title}</h2>
+          <a href="category.html?category=${encodeURIComponent(category.id)}" class="see-all-btn">Lihat Semua</a>
+        </div>
+        <div class="horizontal-scroll-wrapper">
+          <div class="horizontal-scroll"></div>
+          <div class="scroll-indicators"></div>
+        </div>
+      `;
+      
+      parentElement.appendChild(categoryWrapper);
+      
+      const scrollWrapper = categoryWrapper.querySelector('.horizontal-scroll');
+      
+      // Bagi items menjadi grup 3
+      const itemsPerPage = 3;
+      const totalPages = Math.ceil(category.items.length / itemsPerPage);
+      
+      for (let pageIndex = 0; pageIndex < totalPages; pageIndex++) {
+        const scrollPage = document.createElement('div');
+        scrollPage.className = 'scroll-page';
+        
+        // Buat table untuk setiap page
+        const table = document.createElement('table');
+        table.style.width = '100%';
+        
+        const startIndex = pageIndex * itemsPerPage;
+        const endIndex = Math.min(startIndex + itemsPerPage, category.items.length);
+        const pageItems = category.items.slice(startIndex, endIndex);
+        
+        pageItems.forEach((item, itemIndex) => {
+          const globalIndex = startIndex + itemIndex;
+          const row = document.createElement('tr');
+          
+          const card = document.createElement('td');
+          card.style.padding = '0';
+          
+          const cardDiv = document.createElement('div');
+          cardDiv.className = 'cards';
+          
+          cardDiv.innerHTML = `
+            <div class="card-content">
+              <img src="${item.poster_url}" alt="${item.title}" class="poster-icon" loading="lazy">
+              <div class="game-info">
+                <h3 class="game-title">${item.title}</h3>
+                <div class="game-meta">
+                  ${item.version ? `<span class="game-version">${item.version}</span>` : ''}
+                  ${item.genre ? `<span class="game-genre">${item.genre}</span>` : ''}
+                </div>
+              </div>
+            </div>
+          `;
+          
+          // Tambahkan event listener untuk navigasi
+          cardDiv.addEventListener('click', () => {
+            window.location.href = `detail.html?category=${encodeURIComponent(category.id)}&index=${globalIndex}`;
+          });
+          
+          card.appendChild(cardDiv);
+          row.appendChild(card);
+          table.appendChild(row);
+        });
+        
+        scrollPage.appendChild(table);
+        scrollWrapper.appendChild(scrollPage);
+      }
+      
+      // Tambahkan scroll indicators
+      const indicatorsContainer = categoryWrapper.querySelector('.scroll-indicators');
+      if (indicatorsContainer && totalPages > 1) {
+        for (let i = 0; i < totalPages; i++) {
+          const dot = document.createElement('div');
+          dot.className = 'scroll-dot' + (i === 0 ? ' active' : '');
+          dot.dataset.page = i;
+          
+          // Click handler untuk dots
+          dot.addEventListener('click', () => {
+            const pages = scrollWrapper.querySelectorAll('.scroll-page');
+            if (pages[i]) {
+              pages[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+            }
+          });
+          
+          indicatorsContainer.appendChild(dot);
+        }
+        
+        // Update indicators saat scroll
+        let scrollTimeout;
+        scrollWrapper.addEventListener('scroll', () => {
+          clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            const scrollLeft = scrollWrapper.scrollLeft;
+            const containerWidth = scrollWrapper.offsetWidth;
+            const currentPage = Math.round(scrollLeft / containerWidth);
+            
+            const dots = indicatorsContainer.querySelectorAll('.scroll-dot');
+            dots.forEach((dot, index) => {
+              if (index === currentPage) {
+                dot.classList.add('active');
+              } else {
+                dot.classList.remove('active');
+              }
+            });
+          }, 100);
+        });
+      }
+      
+    } else {
+      // Struktur normal untuk grid
+      categoryWrapper.innerHTML = `
+        <div class="category-header">
+          <h2 class="category-title">${category.title}</h2>
+          <a href="category.html?category=${encodeURIComponent(category.id)}" class="see-all-btn">Lihat Semua</a>
+        </div>
+        <div class="cards-container"></div>
+      `;
+      
+      parentElement.appendChild(categoryWrapper);
+      
+      const cardsContainer = categoryWrapper.querySelector('.cards-container');
+      const itemsToShow = category.items.slice(0, 6);
+      
+      itemsToShow.forEach((item, index) => {
+        const screenshot = item.screenshots && item.screenshots.length > 0 ? item.screenshots[0] : item.poster_url;
+        
+        const card = document.createElement('div');
+        card.className = 'cards';
+        card.innerHTML = `
+          <div class="cardx">
+            <img src="${screenshot}" alt="${item.title}" loading="lazy">
+          </div>
+          <div class="card-content">
+            <img src="${item.poster_url}" alt="${item.title}" class="poster-icon">
+            <div class="game-info">
+              <h3 class="game-title">${item.title}</h3>
+              <div class="game-meta">
+                ${item.version ? `<span class="game-version">${item.version}</span>` : ''}
+                ${item.genre ? `<span class="game-genre">${item.genre}</span>` : ''}
+              </div>
+            </div>
+            <a href="detail.html?category=${encodeURIComponent(category.id)}&index=${index}" class="detail-button">Lihat Detail</a>
+          </div>
+        `;
+        
+        cardsContainer.appendChild(card);
+      });
+    }
+  });
+}
+
+    document.addEventListener('DOMContentLoaded', loadCategoriesData);
+  </script>
+  
+    <script>
+        document.querySelectorAll('.cardxu').forEach(cardxu => {
+            cardxu.addEventListener('click', (event) => {
+                event.stopPropagation();
+                cardxu.classList.add('clicked');
+
+                const href = cardxu.getAttribute('data-href');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 2000);
+            });
+        });
+
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.cardxu').forEach(cardxu => {
+                cardxu.classList.remove('clicked');
+            });
+        });
+    </script>
+  
+</body>
+</html>
